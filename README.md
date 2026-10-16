@@ -51,7 +51,7 @@ Historiken sparas i `data/history.csv`. Varje körning sparas även som en dater
 
 ## Bevakade källor
 
-Fastighetsbyrån, Bjurfors Nyproduktion, HusmanHagberg, Svensk Fastighetsförmedling Nyproduktion, Länsförsäkringar Fastighetsförmedling, MOHV, Riksbyggen, Peab Bostad, HSB, Skanska, NCC, Nåiden, Bonava, Lindbäcks, Galären, Booli, Hemnet, Diös, Cederfors Bostad, Nya Projekt och **Byggfakta**.
+Fastighetsbyrån, Bjurfors Nyproduktion, HusmanHagberg, Svensk Fastighetsförmedling Nyproduktion, Länsförsäkringar Fastighetsförmedling, MOHV, Riksbyggen, Peab Bostad, HSB, Skanska, NCC, Nåiden, Bonava, Lindbäcks, Galären, Booli, Hemnet, Diös, Cederfors Bostad, Nya Projekt, **Byggfakta**, **RAWI**, **Stålstaden**, **Hemsö**, **SBS/Studentbostäder i Norden**, **STUSAB Luleå Fastigheter** och **Rikshem**.
 
 
 ## Webbplats
@@ -106,3 +106,17 @@ Byggfakta används som **sekundär aggregator**, inte som primär projektkälla.
 - kontrollera avvikelser mot byggherres eller fastighetsägares egen projektsida.
 
 Om Byggfakta och en aktuell primär privat källa motsäger varandra prioriteras normalt primärkällan, och avvikelsen dokumenteras. Uppgifter bakom inloggning eller abonnemang används bara när de faktiskt är åtkomliga i den aktuella körningen.
+
+
+### Utökad kärnlista för lokal projektbevakning
+
+Följande privata aktörer bevakas särskilt eftersom de har tydlig lokal närvaro, projektutveckling eller större bostadsbestånd i Luleå:
+
+- **RAWI** – hög prioritet; lokal privat fastighetsaktör med uppgift om större nybyggnadsprojekt i Luleå.
+- **Stålstaden** – hög prioritet; lokal fastighetsaktör och relevant för bostadsdominerad blandstad, bland annat Mjölkuddens centrum.
+- **Hemsö** – medel–hög prioritet; relevant som projektpartner i blandstads-/centrumprojekt.
+- **SBS / Studentbostäder i Norden** – medel–hög prioritet; stor privat studentbostadsaktör i Luleå.
+- **STUSAB Luleå Fastigheter** – medel prioritet; används främst som bolags-/ägarkontroll inom SBS-sfären.
+- **Rikshem** – medel prioritet; stor privat bostadsägare med egen nyproduktionsbevakning.
+
+För att undvika dubbelräkning behandlas **SBS/Studentbostäder i Norden och STUSAB** som närstående källor. Ett projekt som förekommer hos båda ska fortfarande bara få ett ProjektID och en Räknegrupp.
