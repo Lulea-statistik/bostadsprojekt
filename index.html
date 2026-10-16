@@ -36,7 +36,7 @@ a{color:#075ea8}.countnote{margin:10px 0;color:#555}
 </div>
 <div class="countnote" id="shown"></div>
 <div class="tablewrap"><table><thead><tr>
-<th>Projekt</th><th>Statusklass</th><th>Område</th><th>Antal bostäder</th><th>Bostadstyp</th><th>Upplåtelseform</th><th>Byggherre</th><th>Projektstatus</th><th>Byggstart</th><th>Säljstart</th><th>Inflyttning</th><th>Källa</th><th>Förändring</th><th>Kommentar</th>
+<th>Projekt</th><th>Statusklass</th><th>Område</th><th>Antal bostäder</th><th>Bostadstyp</th><th>Upplåtelseform</th><th>Byggherre</th><th>Projektstatus</th><th>Byggstart</th><th>Säljstart</th><th>Inflyttning</th><th>Källa</th><th>Källsida datum</th><th>Senast kontrollerad</th><th>Förändring</th><th>Kommentar</th>
 </tr></thead><tbody id="tbody"></tbody></table></div>
 <div id="qc" class="qc">Kvalitetskontroll laddas…</div>
 </main>
@@ -64,7 +64,7 @@ function render(){
  document.getElementById("watchCount").textContent=data.filter(x=>x.Statusklass==="Bevakning").length;
  const unique=new Set();let homes=0;data.filter(x=>x.Statusklass==="Aktiv/verifierad").forEach(x=>{const g=(registry.get(x.ProjektID)||{})["Räknegrupp"]||x.ProjektID;if(!unique.has(g)){unique.add(g);homes+=num(x["Antal bostäder"])}});document.getElementById("homesCount").textContent="ca "+homes;
  document.getElementById("shown").textContent="Visar "+rows.length+" av "+data.length+" projekt/bevakningsfall.";
- document.getElementById("tbody").innerHTML=rows.map(x=>`<tr><td><strong>${esc(x.Projekt)}</strong><div class="muted">${esc(x["Adress/fastighet om publicerad"])}</div></td><td><span class="pill">${esc(x.Statusklass)}</span></td><td>${esc(x["Område"])}</td><td>${esc(x["Antal bostäder"])}</td><td>${esc(x.Bostadstyp)}</td><td>${esc(x.Upplåtelseform)}</td><td>${esc(x["Byggherre/fastighetsägare"])}</td><td>${esc(x.Projektstatus)}</td><td>${esc(x["Planerad byggstart"])}</td><td>${esc(x["Planerad säljstart"])}</td><td>${esc(x["Planerad inflyttning"])}</td><td>${x["Direkt URL"]?`<a href="${esc(x["Direkt URL"])}" target="_blank" rel="noopener">${esc(x["Primär källa"]||"Källa")}</a>`:esc(x["Primär källa"])}</td><td>${esc(x["Ny/ändrad sedan föregående snapshot"])}</td><td>${esc(x.Kommentar)}</td></tr>`).join("");
+ document.getElementById("tbody").innerHTML=rows.map(x=>`<tr><td><strong>${esc(x.Projekt)}</strong><div class="muted">${esc(x["Adress/fastighet om publicerad"])}</div></td><td><span class="pill">${esc(x.Statusklass)}</span></td><td>${esc(x["Område"])}</td><td>${esc(x["Antal bostäder"])}</td><td>${esc(x.Bostadstyp)}</td><td>${esc(x.Upplåtelseform)}</td><td>${esc(x["Byggherre/fastighetsägare"])}</td><td>${esc(x.Projektstatus)}</td><td>${esc(x["Planerad byggstart"])}</td><td>${esc(x["Planerad säljstart"])}</td><td>${esc(x["Planerad inflyttning"])}</td><td>${x["Direkt URL"]?`<a href="${esc(x["Direkt URL"])}" target="_blank" rel="noopener">${esc(x["Primär källa"]||"Källa")}</a>`:esc(x["Primär källa"])}</td><td>${esc(x["Källsida datum"]||"Ej publicerat")}<div class="muted">${esc(x["Datumtyp"])}</div></td><td>${esc(x["Senast kontrollerad"])}</td><td>${esc(x["Ny/ändrad sedan föregående snapshot"])}</td><td>${esc(x.Kommentar)}</td></tr>`).join("");
 }
 ["q","status","area","owner"].forEach(id=>document.getElementById(id).addEventListener(id==="q"?"input":"change",render));
 document.getElementById("reset").addEventListener("click",()=>{["q","status","area","owner"].forEach(id=>document.getElementById(id).value="");render()});
