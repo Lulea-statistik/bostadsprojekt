@@ -85,3 +85,12 @@ Från och med 2026-10-16 sparas även:
 - `Senast kontrollerad` – datum då vi senast kontrollerade projektsidan.
 
 Om en projektsida inte själv redovisar ett säkert publicerings- eller uppdateringsdatum anges **Ej publicerat**. Crawldatum, sökmotorns indexdatum eller ett datum som bara förekommer i brödtext används inte som ersättning för sidans uppdateringsdatum.
+
+
+## Följ projekt
+
+GitHub Pages innehåller även sidan **Följ projekt**:
+
+https://lulea-statistik.github.io/bostadsprojekt/folj-projekt.html
+
+Där kan ett projekt väljas i en lista. Ett Gantt-liknande historikdiagram visar hur statusklass, projektstatus, bostadsantal, byggherre, upplåtelseform, planerad byggstart, säljstart och inflyttning förändras mellan snapshots. Under diagrammet visas även den fullständiga snapshot-historiken för valt projekt.
