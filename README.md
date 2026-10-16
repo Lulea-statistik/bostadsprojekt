@@ -74,3 +74,14 @@ GitHub Actions kör `scripts/validate_data.py` vid ändringar i data eller snaps
 - två aktiva rader har samma `Räknegrupp`,
 - ett okänt `ProjektID` används,
 - samma kombination av `Snapshot + ProjektID` förekommer flera gånger i historiken.
+
+
+## Källdatum och kontrolltid
+
+Från och med 2026-10-16 sparas även:
+
+- `Källsida datum` – datum som faktiskt anges av källan,
+- `Datumtyp` – om datumet är `Uppdaterad`, `Publicerad` eller om datum saknas,
+- `Senast kontrollerad` – datum då vi senast kontrollerade projektsidan.
+
+Om en projektsida inte själv redovisar ett säkert publicerings- eller uppdateringsdatum anges **Ej publicerat**. Crawldatum, sökmotorns indexdatum eller ett datum som bara förekommer i brödtext används inte som ersättning för sidans uppdateringsdatum.
