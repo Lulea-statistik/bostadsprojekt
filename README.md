@@ -1,0 +1,54 @@
+# Bostadsprojekt i Luleå kommun
+
+Sammanställning av kommande, planerade, säljstartade och pågående nya bostadsprojekt i Luleå kommun.
+
+**Senaste kontroll:** 2026-10-16  
+**Källprincip:** endast privata/icke-kommunala källor. Luleå kommun och kommunala bolag används inte som verifieringskälla.
+
+## Aktiva och verifierat planerade projekt
+
+| Projekt | Område | Antal bostäder | Upplåtelseform | Byggherre/fastighetsägare | Status | Planerad byggstart | Planerad inflyttning | Senast ändrad |
+|---|---|---:|---|---|---|---|---|---|
+| Bonum Brf Årstiden | Björkskatan | 48 | Bostadsrätt, 55+ | Riksbyggen | Försäljning pågår | Ej verifierad | Prel. 2029 | 2026-10-16 |
+| Termosen | Kronandalen | 32 | Bostadsrätt | Bonava | Försäljning pågår | Ej verifierad | Våren 2027, äldre prognos | 2026-10-16 |
+| Kvarteret Skogsgläntan | Notviken | 52 | 48 bostadsrätter + 4 äganderätter | Lindbäcks + Cederfors | Etappvis försäljning pågår | 2026 enligt tidigare plan | 2027 för Brf Granen | 2026-10-16 |
+| Kronanvägen | Kronan | ca 140 | Hyresrätt | Nornan Fastighetsutveckling + Lindbäcks | Planerat | 2026 enligt projektkatalog | Ej verifierad | 2026-10-16 |
+| Brf Västra Stranden | Centrum/Västra Stranden | 74 | Bostadsrätt | Diös | Försäljning pågår | Ej verifierad | Ej verifierad | 2026-10-16 |
+| Kv Fjärilen | Varvet | ca 38 | Ej verifierad | Galären | Planerat, detaljplaneskede | Tidigast våren 2027, villkorat | Ej verifierad | 2026-10-16 |
+| Kåsan i Kronandalen | Kronandalen | 43 | Bostadsrätt | Bonava | Planerat, intresseanmälan | Ej verifierad | Ej verifierad | 2026-10-16 |
+| Ryggsäcken i Kronandalen | Kronandalen | 38 | Bostadsrätt | Bonava | Planerat, intresseanmälan | Ej verifierad | Ej verifierad | 2026-10-16 |
+
+**Aktiva/verifierade projekt: 8.** Publicerade projektuppgifter motsvarar cirka **465 bostäder**. Det är inte samma sak som byggstartade eller färdigställda bostäder.
+
+## Bevakningsfall
+
+| Projekt | Område | Antal bostäder | Status | Orsak till bevakning | Senast kontrollerad |
+|---|---|---:|---|---|---|
+| Brf Bergtallen | Dalbo | 25 | Försäljning pausad | Ingen verifierad återstart | 2026-10-16 |
+| Kallkällan | Luleå | 46 | Osäker, möjligen färdigställt | Publicerad färdigställandetid har passerat | 2026-10-16 |
+| Kv Gäddan | Centrum | drygt 78 | Kommande enligt äldre information | Färsk genomförandetidplan saknas | 2026-10-16 |
+| Munkeberg Strand | Munkeberg | Ej verifierat | Tidigt skede | Aktualitet och tidplan osäkra | 2026-10-16 |
+| Centralt bostadshus vid Varvsleden / Gersen | Centrum | 24 | Troligen inaktuell | Äldre planerad byggstart 2019 | 2026-10-16 |
+| Hertsöheden – Bonava/Ekeblad | Hertsöheden | Ej fastställt per aktör | Tidigt planeringsskede | Områdesvolym kan inte tillskrivas respektive byggherre | 2026-10-16 |
+
+**Bevakningsfall: 6.**
+
+## Förändringar vid senaste kontrollen
+
+- Skogsgläntan: ny annonseringsaktivitet och informationsträff för Brf Granen 21 oktober 2026.
+- Kronanvägen: ägarförhållanden och upplåtelseform preciserade; byggstart fortfarande inte verifierad.
+- Västra Stranden: adressuppgift kompletterad.
+- Kåsan och Ryggsäcken: Regementsvägen verifierad som gatuadress.
+- Hertsöheden: tillagt som bevakningsfall; bygger på äldre privat information, inte en nyannonsering 2026-10-16.
+
+## Metod
+
+Varje körning söker efter kommande, planerade, säljstartade eller pågående nya bostadsprojekt inom Luleå kommun. Projektens detaljsidor öppnas när de finns. Primär privat källa, exempelvis byggherre eller fastighetsägare, prioriteras. Mäklar-, portal- och branschkällor används som kompletterande kontroll.
+
+Uppgifter om antal bostäder, byggstart, säljstart eller inflyttning gissas inte. Gamla, motsägelsefulla eller osäkra uppgifter markeras och kan flyttas till bevakningslistan.
+
+Historiken sparas i `data/history.csv`. Varje körning sparas även som en daterad snapshot i `snapshots/`.
+
+## Bevakade källor
+
+Fastighetsbyrån, Bjurfors Nyproduktion, HusmanHagberg, Svensk Fastighetsförmedling Nyproduktion, Länsförsäkringar Fastighetsförmedling, MOHV, Riksbyggen, Peab Bostad, HSB, Skanska, NCC, Nåiden, Bonava, Lindbäcks, Galären, Booli, Hemnet, Diös, Cederfors Bostad och Nya Projekt.
