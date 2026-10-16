@@ -1,0 +1,15 @@
+ProjektID,CanonicalProjekt,Räknegrupp,ModerprojektID,RäknaIProjektTotal,Kommentar
+arstiden,Bonum Brf Årstiden,arstiden,,Ja,Ett självständigt projekt.
+termosen,Termosen,termosen,,Ja,Ett självständigt projekt.
+skogsglantan,Kvarteret Skogsgläntan,skogsglantan,,Ja,"Moderprojekt. Brf Granen, Brf Tallen och äganderättsradhusen ingår i totalsiffran 52 och får inte räknas som separata projekt ovanpå denna rad."
+kronanvagen,Kronanvägen,kronanvagen,,Ja,Ett självständigt projekt.
+vastra-stranden,Brf Västra Stranden,vastra-stranden,,Ja,Ett självständigt projekt.
+fjarilen,Kv Fjärilen,fjarilen,,Ja,Ett självständigt projekt.
+kasan,Kåsan i Kronandalen,kasan,,Ja,Ett självständigt projekt. Använd projektspecifikt antal och inte större områdestal.
+ryggsacken,Ryggsäcken i Kronandalen,ryggsacken,,Ja,Ett självständigt projekt. Använd projektspecifikt antal och inte större områdestal.
+bergtallen,Brf Bergtallen,bergtallen,,Nej,Bevakningsfall.
+kallkallan,Kallkällan,kallkallan,,Nej,Bevakningsfall.
+gaddan,Kv Gäddan,gaddan,,Nej,Bevakningsfall.
+munkeberg-strand,Munkeberg Strand,munkeberg-strand,,Nej,Bevakningsfall.
+gersen-varvsleden,Centralt bostadshus vid Varvsleden / Gersen,gersen-varvsleden,,Nej,Bevakningsfall.
+hertsoheden-bonava-ekeblad,Hertsöheden – Bonava/Ekeblad,hertsoheden-bonava-ekeblad,,Nej,"Områdesnivå. Ska inte räknas i säker bostadsvolym eller som flera projekt per aktör utan projektspecifik verifiering."
