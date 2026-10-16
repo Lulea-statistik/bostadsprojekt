@@ -52,3 +52,25 @@ Historiken sparas i `data/history.csv`. Varje körning sparas även som en dater
 ## Bevakade källor
 
 Fastighetsbyrån, Bjurfors Nyproduktion, HusmanHagberg, Svensk Fastighetsförmedling Nyproduktion, Länsförsäkringar Fastighetsförmedling, MOHV, Riksbyggen, Peab Bostad, HSB, Skanska, NCC, Nåiden, Bonava, Lindbäcks, Galären, Booli, Hemnet, Diös, Cederfors Bostad och Nya Projekt.
+
+
+## Webbplats
+
+Den filtrerbara tabellen publiceras via GitHub Pages från root på `main`:
+
+https://lulea-statistik.github.io/bostadsprojekt/
+
+Webbsidan läser den senaste snapshoten ur `data/history.csv` och kan filtreras på projekttext, statusklass, område och byggherre.
+
+## Kvalitetskontroll mot dubbelräkning
+
+Varje projekt har ett stabilt `ProjektID` i `data/project_registry.csv`. Registret innehåller även en `Räknegrupp` som används när flera namn eller deletapper hör till samma övergripande projekt.
+
+Exempel: **Kvarteret Skogsgläntan** räknas som ett projekt med 52 bostäder. Brf Granen, Brf Tallen och äganderättsradhusen får därför inte samtidigt läggas in som separata aktiva projekt ovanpå moderprojektet.
+
+GitHub Actions kör `scripts/validate_data.py` vid ändringar i data eller snapshots och stoppar valideringen om:
+
+- samma `ProjektID` förekommer mer än en gång i samma snapshot,
+- två aktiva rader har samma `Räknegrupp`,
+- ett okänt `ProjektID` används,
+- samma kombination av `Snapshot + ProjektID` förekommer flera gånger i historiken.
