@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Följ projekt – Bostadsprojekt i Luleå kommun</title>
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
 :root{font-family:Arial,Helvetica,sans-serif;color:#222;background:#f5f5f5}
 *{box-sizing:border-box} body{margin:0} header{background:#fff;border-bottom:1px solid #ddd;padding:28px max(20px,calc((100% - 1450px)/2))}
 h1{margin:0 0 8px;font-size:30px}.sub{color:#555;max-width:950px;line-height:1.5}.nav{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}.nav a{display:inline-block;padding:8px 12px;border:1px solid #bbb;border-radius:7px;text-decoration:none;background:#fff;color:#222}.nav a.active{background:#222;color:#fff;border-color:#222}
@@ -22,6 +22,12 @@ main{max-width:1450px;margin:0 auto;padding:22px 20px 60px}
 table{width:100%;border-collapse:collapse}th,td{padding:9px 10px;border-bottom:1px solid #e5e5e5;text-align:left;vertical-align:top;font-size:14px}th{background:#222;color:#fff}.tablewrap{overflow:auto}
 a{color:#075ea8}.muted{color:#666}
 @media(max-width:900px){.controls{grid-template-columns:1fr}.summarygrid{grid-template-columns:1fr 1fr}.axis,.grow{grid-template-columns:150px 1fr}}
+
+/* Gemensam webbtypografi: Inter text, Protipo rubriker och lankar nar webbfont laddas. */
+:root{--font-body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--font-heading:'protipo','Inter',system-ui,sans-serif}
+body{font-family:var(--font-body)}
+h1,h2,h3,h4,h5,h6,a,nav a{font-family:var(--font-heading)}
+button,input,select,textarea,table{font-family:var(--font-body)}
 </style>
 </head>
 <body>
