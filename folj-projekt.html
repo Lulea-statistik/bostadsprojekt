@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Följ projekt – Bostadsprojekt i Luleå kommun</title>
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#222;background:#f5f5f5}
+*{box-sizing:border-box} body{margin:0} header{background:#fff;border-bottom:1px solid #ddd;padding:28px max(20px,calc((100% - 1450px)/2))}
+h1{margin:0 0 8px;font-size:30px}.sub{color:#555;max-width:950px;line-height:1.5}.nav{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}.nav a{display:inline-block;padding:8px 12px;border:1px solid #bbb;border-radius:7px;text-decoration:none;background:#fff;color:#222}.nav a.active{background:#222;color:#fff;border-color:#222}
+main{max-width:1450px;margin:0 auto;padding:22px 20px 60px}
+.controls,.summary,.ganttbox,.historybox{background:#fff;border:1px solid #ddd;border-radius:10px;padding:16px;margin-bottom:16px}
+.controls{display:grid;grid-template-columns:minmax(280px,520px) auto;gap:12px;align-items:end}.controls label{display:block;font-weight:700;margin-bottom:6px}.controls select{width:100%;font:inherit;padding:10px;border:1px solid #bbb;border-radius:6px;background:#fff}
+.summarygrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.metric{border:1px solid #e0e0e0;border-radius:8px;padding:12px}.metric span{display:block;color:#666;font-size:13px;margin-bottom:5px}.metric strong{font-size:17px}
+.note{padding:11px 13px;border-radius:8px;background:#fff4e5;border:1px solid #e4bf7c;margin-bottom:14px}
+.gantt-scroll{overflow:auto}.gantt{min-width:1050px}
+.axis{display:grid;grid-template-columns:210px 1fr;align-items:end;margin-bottom:4px}.axislabel{font-weight:700;padding-right:10px}.axisline{position:relative;height:42px;border-bottom:1px solid #aaa}
+.tick{position:absolute;bottom:0;transform:translateX(-50%);font-size:12px;color:#555;white-space:nowrap}.tick:after{content:"";position:absolute;left:50%;bottom:-7px;height:7px;border-left:1px solid #aaa}
+.grow{display:grid;grid-template-columns:210px 1fr;min-height:54px;border-bottom:1px solid #eee}.glabel{padding:11px 12px 8px 0;font-weight:700}.track{position:relative;margin:8px 0;background:linear-gradient(to bottom,transparent 49%,#eee 50%,transparent 51%);min-height:38px}
+.seg{position:absolute;top:5px;height:28px;border-radius:5px;background:#d9e4ef;border:1px solid #8aa5bf;padding:5px 7px;font-size:12px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;min-width:8px}.seg.changed{background:#f1e2c5;border-color:#c69d55}.seg.point{min-width:12px;padding:0;border-radius:50%}
+.legend{color:#666;font-size:13px;margin-top:10px}
+table{width:100%;border-collapse:collapse}th,td{padding:9px 10px;border-bottom:1px solid #e5e5e5;text-align:left;vertical-align:top;font-size:14px}th{background:#222;color:#fff}.tablewrap{overflow:auto}
+a{color:#075ea8}.muted{color:#666}
+@media(max-width:900px){.controls{grid-template-columns:1fr}.summarygrid{grid-template-columns:1fr 1fr}.axis,.grow{grid-template-columns:150px 1fr}}
+</style>
+</head>
+<body>
+<header>
+<h1>Följ projekt</h1>
+<div class="sub">Välj ett bostadsprojekt och följ hur status och centrala egenskaper förändras mellan våra snapshots. Diagrammet bygger på den historik som sparas i GitHub vid varje körning.</div>
+<nav class="nav"><a href="index.html">Projektlista</a><a class="active" href="folj-projekt.html">Följ projekt</a></nav>
+</header>
+<main>
+<div class="controls">
+<div><label for="project">Projekt</label><select id="project"><option value="">Laddar projekt…</option></select></div>
+<div class="muted" id="rangeInfo"></div>
+</div>
+<div id="singleNote" class="note" style="display:none">Historiken innehåller ännu bara en snapshot för detta projekt. Diagrammet blir successivt mer informativt när kommande veckokörningar läggs till.</div>
+<div class="summary"><div class="summarygrid">
+<div class="metric"><span>Nuvarande statusklass</span><strong id="mStatus">–</strong></div>
+<div class="metric"><span>Projektstatus</span><strong id="mProjectStatus">–</strong></div>
+<div class="metric"><span>Antal bostäder</span><strong id="mHomes">–</strong></div>
+<div class="metric"><span>Senast kontrollerad</span><strong id="mChecked">–</strong></div>
+</div></div>
+<div class="ganttbox">
+<h2 style="margin-top:0">Utveckling över tid</h2>
+<div class="gantt-scroll"><div class="gantt" id="gantt"></div></div>
+<div class="legend">Varje stapel visar hur länge ett registrerat värde varit oförändrat mellan snapshots. Ett nytt segment börjar när värdet ändras. Det sista segmentet är öppet till senaste kontrollperioden.</div>
+</div>
+<div class="historybox">
+<h2 style="margin-top:0">Snapshot-historik</h2>
+<div class="tablewrap"><table><thead><tr><th>Datum</th><th>Statusklass</th><th>Projektstatus</th><th>Antal bostäder</th><th>Byggherre</th><th>Byggstart</th><th>Säljstart</th><th>Inflyttning</th><th>Förändring</th><th>Källa</th></tr></thead><tbody id="historyBody"></tbody></table></div>
+</div>
+</main>
+<script>
+function parseCSV(t){const rows=[];let r=[],f="",q=false;for(let i=0;i<t.length;i++){const c=t[i];if(q){if(c=='"'&&t[i+1]=='"'){f+='"';i++;}else if(c=='"')q=false;else f+=c;}else{if(c=='"')q=true;else if(c==','){r.push(f);f="";}else if(c=='\n'){r.push(f);if(r.some(x=>x!==""))rows.push(r);r=[];f="";}else if(c!='\r')f+=c;}}if(f||r.length){r.push(f);rows.push(r)}return rows}
+function objects(t){const r=parseCSV(t),h=r[0];return r.slice(1).map(x=>Object.fromEntries(h.map((k,i)=>[k,x[i]||""])))}
+function esc(s){return String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+function dateNum(s){return new Date(s+"T00:00:00").getTime()}
+function fmt(s){if(!s)return "–";const [y,m,d]=s.split("-");return d+"."+m+"."+y}
+const attrs=[
+ ["Statusklass","Statusklass"],
+ ["Projektstatus","Projektstatus"],
+ ["Antal bostäder","Antal bostäder"],
+ ["Byggherre/fastighetsägare","Byggherre"],
+ ["Upplåtelseform","Upplåtelseform"],
+ ["Planerad byggstart","Planerad byggstart"],
+ ["Planerad säljstart","Planerad säljstart"],
+ ["Planerad inflyttning","Planerad inflyttning"]
+];
+let all=[];
+fetch("data/history.csv").then(r=>r.text()).then(t=>{
+ all=objects(t);
+ const latestById=new Map();
+ all.forEach(x=>latestById.set(x.ProjektID,x));
+ const projects=[...latestById.values()].sort((a,b)=>a.Projekt.localeCompare(b.Projekt,"sv"));
+ const s=document.getElementById("project");s.innerHTML="";
+ projects.forEach(x=>{const o=document.createElement("option");o.value=x.ProjektID;o.textContent=x.Projekt;s.appendChild(o)});
+ if(projects.length){s.value=projects[0].ProjektID;render()}
+ s.addEventListener("change",render);
+});
+function render(){
+ const id=document.getElementById("project").value;
+ const rows=all.filter(x=>x.ProjektID===id).sort((a,b)=>a.Snapshot.localeCompare(b.Snapshot));
+ if(!rows.length)return;
+ const latest=rows.at(-1);
+ document.getElementById("mStatus").textContent=latest.Statusklass||"–";
+ document.getElementById("mProjectStatus").textContent=latest.Projektstatus||"–";
+ document.getElementById("mHomes").textContent=latest["Antal bostäder"]||"–";
+ document.getElementById("mChecked").textContent=latest["Senast kontrollerad"]||latest.Snapshot||"–";
+ document.getElementById("singleNote").style.display=rows.length<2?"block":"none";
+ const start=dateNum(rows[0].Snapshot), last=dateNum(rows.at(-1).Snapshot);
+ const week=7*86400000, end=last===start?last+week:last+Math.max(week,(last-start)*0.08);
+ document.getElementById("rangeInfo").textContent="Historik: "+fmt(rows[0].Snapshot)+" – "+fmt(rows.at(-1).Snapshot)+" ("+rows.length+" snapshot"+(rows.length===1?"":"s")+")";
+ renderGantt(rows,start,end);
+ document.getElementById("historyBody").innerHTML=rows.slice().reverse().map(x=>`<tr><td>${fmt(x.Snapshot)}</td><td>${esc(x.Statusklass)}</td><td>${esc(x.Projektstatus)}</td><td>${esc(x["Antal bostäder"])}</td><td>${esc(x["Byggherre/fastighetsägare"])}</td><td>${esc(x["Planerad byggstart"])}</td><td>${esc(x["Planerad säljstart"])}</td><td>${esc(x["Planerad inflyttning"])}</td><td>${esc(x["Ny/ändrad sedan föregående snapshot"])}</td><td>${x["Direkt URL"]?`<a href="${esc(x["Direkt URL"])}" target="_blank" rel="noopener">${esc(x["Primär källa"]||"Källa")}</a>`:esc(x["Primär källa"])}</td></tr>`).join("");
+}
+function renderGantt(rows,start,end){
+ const total=end-start;
+ const tickCount=5;
+ let html='<div class="axis"><div class="axislabel">Egenskap</div><div class="axisline">';
+ for(let i=0;i<tickCount;i++){const p=i/(tickCount-1),d=new Date(start+total*p),iso=d.toISOString().slice(0,10);html+=`<div class="tick" style="left:${p*100}%">${fmt(iso)}</div>`;}
+ html+='</div></div>';
+ attrs.forEach(([key,label])=>{
+   const segs=[];let cur=null;
+   rows.forEach((r,i)=>{
+     const v=r[key]||"Ej angivet";
+     if(!cur||cur.value!==v){if(cur)cur.end=dateNum(r.Snapshot);cur={value:v,start:dateNum(r.Snapshot),end:end,changed:!!cur};segs.push(cur)}
+   });
+   if(segs.length)segs.at(-1).end=end;
+   html+=`<div class="grow"><div class="glabel">${esc(label)}</div><div class="track">`;
+   segs.forEach((s,i)=>{
+      const left=((s.start-start)/total)*100, width=Math.max(1.2,((s.end-s.start)/total)*100);
+      const title=fmt(new Date(s.start).toISOString().slice(0,10))+" – "+(s.end===end?"senaste period":fmt(new Date(s.end).toISOString().slice(0,10)))+": "+s.value;
+      html+=`<div class="seg ${i>0?"changed":""}" style="left:${left}%;width:${width}%" title="${esc(title)}">${esc(s.value)}</div>`;
+   });
+   html+='</div></div>';
+ });
+ document.getElementById("gantt").innerHTML=html;
+}
+</script>
+</body>
+</html>
