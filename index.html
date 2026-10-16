@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bostadsprojekt i Luleå kommun</title>
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#222;background:#f5f5f5}
+*{box-sizing:border-box} body{margin:0} header{background:#fff;border-bottom:1px solid #ddd;padding:28px max(20px,calc((100% - 1450px)/2))}
+h1{margin:0 0 8px;font-size:30px} .sub{color:#555;max-width:900px;line-height:1.45}
+main{max-width:1450px;margin:0 auto;padding:22px 20px 60px}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}
+.card{background:#fff;border:1px solid #ddd;border-radius:10px;padding:16px}.card strong{display:block;font-size:28px;margin-top:4px}
+.filters{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:10px;background:#fff;border:1px solid #ddd;border-radius:10px;padding:14px;margin-bottom:14px}
+input,select,button{font:inherit;padding:10px;border:1px solid #bbb;border-radius:6px;background:#fff}button{cursor:pointer}.tablewrap{background:#fff;border:1px solid #ddd;border-radius:10px;overflow:auto}
+table{border-collapse:collapse;width:100%;min-width:1500px}th,td{padding:9px 10px;border-bottom:1px solid #e5e5e5;text-align:left;vertical-align:top;font-size:14px}th{position:sticky;top:0;background:#222;color:white;z-index:1}
+tr:hover td{background:#f7f7f7}.pill{display:inline-block;padding:3px 8px;border-radius:999px;background:#eee;white-space:nowrap}.muted{color:#666}.qc{margin-top:14px;padding:12px 14px;border-radius:8px;background:#eef7ee;border:1px solid #bed9be}.qc.warn{background:#fff4e5;border-color:#e4bf7c}
+a{color:#075ea8}.countnote{margin:10px 0;color:#555}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}.filters{grid-template-columns:1fr}.filters button{width:100%}}
+</style>
+</head>
+<body>
+<header><h1>Bostadsprojekt i Luleå kommun</h1><div class="sub">Privata och icke-kommunala källor. Tabellen visar senaste snapshot och kan filtreras. Bevakningsfall hålls separata från aktiva/verifierade projekt.</div></header>
+<main>
+<div class="cards">
+<div class="card">Aktiva/verifierade<strong id="activeCount">–</strong></div>
+<div class="card">Bevakningsfall<strong id="watchCount">–</strong></div>
+<div class="card">Publicerade bostäder, aktiva<strong id="homesCount">–</strong></div>
+<div class="card">Senaste snapshot<strong id="snapshotDate" style="font-size:22px">–</strong></div>
+</div>
+<div class="filters">
+<input id="q" type="search" placeholder="Sök projekt, område, byggherre, status…">
+<select id="status"><option value="">Alla statusklasser</option></select>
+<select id="area"><option value="">Alla områden</option></select>
+<select id="owner"><option value="">Alla byggherrar</option></select>
+<button id="reset">Nollställ</button>
+</div>
+<div class="countnote" id="shown"></div>
+<div class="tablewrap"><table><thead><tr>
+<th>Projekt</th><th>Statusklass</th><th>Område</th><th>Antal bostäder</th><th>Bostadstyp</th><th>Upplåtelseform</th><th>Byggherre</th><th>Projektstatus</th><th>Byggstart</th><th>Säljstart</th><th>Inflyttning</th><th>Källa</th><th>Förändring</th><th>Kommentar</th>
+</tr></thead><tbody id="tbody"></tbody></table></div>
+<div id="qc" class="qc">Kvalitetskontroll laddas…</div>
+</main>
+<script>
+function parseCSV(t){const rows=[];let r=[],f="",q=false;for(let i=0;i<t.length;i++){const c=t[i];if(q){if(c=='"'&&t[i+1]=='"'){f+='"';i++;}else if(c=='"')q=false;else f+=c;}else{if(c=='"')q=true;else if(c==','){r.push(f);f="";}else if(c=='\n'){r.push(f);if(r.some(x=>x!==""))rows.push(r);r=[];f="";}else if(c!='\r')f+=c;}}if(f||r.length){r.push(f);rows.push(r)}return rows}
+function objects(t){const r=parseCSV(t),h=r[0];return r.slice(1).map(x=>Object.fromEntries(h.map((k,i)=>[k,x[i]||""])))}
+function esc(s){return String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+function num(s){const m=String(s||"").match(/\d+/);return m?Number(m[0]):0}
+let data=[], registry=new Map(), latest="";
+Promise.all([fetch("data/history.csv").then(r=>r.text()),fetch("data/project_registry.csv").then(r=>r.text())]).then(([h,reg])=>{
+ const all=objects(h), regs=objects(reg); regs.forEach(x=>registry.set(x.ProjektID,x));
+ latest=all.map(x=>x.Snapshot).sort().at(-1); data=all.filter(x=>x.Snapshot===latest);
+ const seen=new Set(), dup=[]; data.forEach(x=>{if(seen.has(x.ProjektID))dup.push(x.ProjektID);seen.add(x.ProjektID)});
+ const groups=new Set(), groupDup=[]; data.filter(x=>x.Statusklass==="Aktiv/verifierad").forEach(x=>{const g=(registry.get(x.ProjektID)||{})["Räknegrupp"]||x.ProjektID;if(groups.has(g))groupDup.push(g);groups.add(g)});
+ document.getElementById("qc").textContent=dup.length||groupDup.length?"Varning: möjlig dubbelräkning upptäckt: "+[...dup,...groupDup].join(", "):"Kvalitetskontroll: inga dubbla ProjektID eller räknegrupper i senaste snapshot.";
+ if(dup.length||groupDup.length)document.getElementById("qc").classList.add("warn");
+ fill("status",[...new Set(data.map(x=>x.Statusklass))]);fill("area",[...new Set(data.map(x=>x["Område"]))]);fill("owner",[...new Set(data.map(x=>x["Byggherre/fastighetsägare"]))]);
+ document.getElementById("snapshotDate").textContent=latest;render();
+}).catch(e=>{document.getElementById("qc").textContent="Kunde inte läsa data: "+e.message;document.getElementById("qc").classList.add("warn")});
+function fill(id,vals){const s=document.getElementById(id);vals.filter(Boolean).sort((a,b)=>a.localeCompare(b,"sv")).forEach(v=>{const o=document.createElement("option");o.value=v;o.textContent=v;s.appendChild(o)})}
+function render(){
+ const q=document.getElementById("q").value.toLowerCase(), st=document.getElementById("status").value, ar=document.getElementById("area").value, ow=document.getElementById("owner").value;
+ const rows=data.filter(x=>(!st||x.Statusklass===st)&&(!ar||x["Område"]===ar)&&(!ow||x["Byggherre/fastighetsägare"]===ow)&&(!q||Object.values(x).join(" ").toLowerCase().includes(q)));
+ document.getElementById("activeCount").textContent=data.filter(x=>x.Statusklass==="Aktiv/verifierad").length;
+ document.getElementById("watchCount").textContent=data.filter(x=>x.Statusklass==="Bevakning").length;
+ const unique=new Set();let homes=0;data.filter(x=>x.Statusklass==="Aktiv/verifierad").forEach(x=>{const g=(registry.get(x.ProjektID)||{})["Räknegrupp"]||x.ProjektID;if(!unique.has(g)){unique.add(g);homes+=num(x["Antal bostäder"])}});document.getElementById("homesCount").textContent="ca "+homes;
+ document.getElementById("shown").textContent="Visar "+rows.length+" av "+data.length+" projekt/bevakningsfall.";
+ document.getElementById("tbody").innerHTML=rows.map(x=>`<tr><td><strong>${esc(x.Projekt)}</strong><div class="muted">${esc(x["Adress/fastighet om publicerad"])}</div></td><td><span class="pill">${esc(x.Statusklass)}</span></td><td>${esc(x["Område"])}</td><td>${esc(x["Antal bostäder"])}</td><td>${esc(x.Bostadstyp)}</td><td>${esc(x.Upplåtelseform)}</td><td>${esc(x["Byggherre/fastighetsägare"])}</td><td>${esc(x.Projektstatus)}</td><td>${esc(x["Planerad byggstart"])}</td><td>${esc(x["Planerad säljstart"])}</td><td>${esc(x["Planerad inflyttning"])}</td><td>${x["Direkt URL"]?`<a href="${esc(x["Direkt URL"])}" target="_blank" rel="noopener">${esc(x["Primär källa"]||"Källa")}</a>`:esc(x["Primär källa"])}</td><td>${esc(x["Ny/ändrad sedan föregående snapshot"])}</td><td>${esc(x.Kommentar)}</td></tr>`).join("");
+}
+["q","status","area","owner"].forEach(id=>document.getElementById(id).addEventListener(id==="q"?"input":"change",render));
+document.getElementById("reset").addEventListener("click",()=>{["q","status","area","owner"].forEach(id=>document.getElementById(id).value="");render()});
+</script>
+</body></html>
