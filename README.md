@@ -51,7 +51,7 @@ Historiken sparas i `data/history.csv`. Varje körning sparas även som en dater
 
 ## Bevakade källor
 
-Fastighetsbyrån, Bjurfors Nyproduktion, HusmanHagberg, Svensk Fastighetsförmedling Nyproduktion, Länsförsäkringar Fastighetsförmedling, MOHV, Riksbyggen, Peab Bostad, HSB, Skanska, NCC, Nåiden, Bonava, Lindbäcks, Galären, Booli, Hemnet, Diös, Cederfors Bostad och Nya Projekt.
+Fastighetsbyrån, Bjurfors Nyproduktion, HusmanHagberg, Svensk Fastighetsförmedling Nyproduktion, Länsförsäkringar Fastighetsförmedling, MOHV, Riksbyggen, Peab Bostad, HSB, Skanska, NCC, Nåiden, Bonava, Lindbäcks, Galären, Booli, Hemnet, Diös, Cederfors Bostad, Nya Projekt och **Byggfakta**.
 
 
 ## Webbplats
@@ -94,3 +94,15 @@ GitHub Pages innehåller även sidan **Följ projekt**:
 https://lulea-statistik.github.io/bostadsprojekt/folj-projekt.html
 
 Där kan ett projekt väljas i en lista. Ett Gantt-liknande historikdiagram visar hur statusklass, projektstatus, bostadsantal, byggherre, upplåtelseform, planerad byggstart, säljstart och inflyttning förändras mellan snapshots. Under diagrammet visas även den fullständiga snapshot-historiken för valt projekt.
+
+
+### Byggfakta som kompletterande källa
+
+Byggfakta används som **sekundär aggregator**, inte som primär projektkälla. Uppgifter därifrån kan användas för att:
+
+- upptäcka projekt som ännu inte fångats av övriga källor,
+- komplettera byggstart, byggslut, projektstadium och involverade aktörer,
+- identifiera förändrade tidsplaner eller projektstatus,
+- kontrollera avvikelser mot byggherres eller fastighetsägares egen projektsida.
+
+Om Byggfakta och en aktuell primär privat källa motsäger varandra prioriteras normalt primärkällan, och avvikelsen dokumenteras. Uppgifter bakom inloggning eller abonnemang används bara när de faktiskt är åtkomliga i den aktuella körningen.
