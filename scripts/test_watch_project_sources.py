@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+"""Regression tests for non-destructive classification of project sources."""
+import importlib.util
+import unittest
+from pathlib import Path
+
+path = Path(__file__).with_name("watch_project_sources.py")
+spec = importlib.util.spec_from_file_location("watch_project_sources", path)
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
+
+class ClassificationTest(unittest.TestCase):
+    def test_known_project_url(self):
+        row = {"url": "https://lindbacks.se/alla-projekt/kallkallan", "title": "Kallkällan 46 lägenheter i Luleå", "source": "Lindbäcks"}
+        self.assertEqual(module.candidate_class(row, {row["url"]}, []), "Känd projektkälla")
+
+    def test_no_automatic_known_on_nonmatching_title(self):
+        row = {"url": "https://lulebo.se/artikel/28-nya-lagenheter-i-gammelstad", "title": "28 nya lägenheter i Gammelstad", "source": "Lulebo"}
+        self.assertEqual(module.candidate_class(row, set(), ["kallkällan"]), "Möjligt nytt projekt – granska")
+
+    def test_other_city_rejected(self):
+        row = {"url": "https://lindbacks.se/alla-projekt/kv-nacken", "title": "90 bostäder i Piteå", "source": "Lindbäcks"}
+        self.assertIn("Utanför", module.candidate_class(row, set(), []))
+
+    def test_local_lindbacks_accepted(self):
+        row = {"url": "https://lindbacks.se/alla-projekt/skogsglantan", "title": "52 bostäder i Luleå", "source": "Lindbäcks"}
+        self.assertEqual(module.candidate_class(row, set(), []), "Möjligt nytt projekt – granska")
+
+    def test_irrelevant_lulebo_link(self):
+        row = {"url": "https://lulebo.se/artikel/ny-lagenhetshyra", "title": "Ny lägenhetshyra", "source": "Lulebo"}
+        self.assertIn("Övrig länk", module.candidate_class(row, set(), []))
+
+    def test_normalize_query_and_www(self):
+        self.assertEqual(module.normalize("https://www.lulebo.se/artikel/nybygge/?utm_source=test"), "https://lulebo.se/artikel/nybygge")
+
+if __name__ == "__main__":
+    unittest.main()
