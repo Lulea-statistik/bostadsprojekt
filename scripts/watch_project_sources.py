@@ -51,7 +51,7 @@ def candidate_class(item, known, names):
     if "lulebo" in source and re.search(r"hyra|hyresförhand|hyreshöj|hyresgäst|hyresavi|hyresnivå|lägenhetsbyte|bostadskö", title + " " + path, re.I):
         return "Övrig länk – ej projektindikation"
     if "lulebo" in source:
-        if not re.search(r"nyproduktion|nybygg|bygger|(?:ny|nya)[\s-]+(?:\\d+[\s-]+)?(?:lägenhet(?:er)?|lagenhet(?:er)?|hyresrätt(?:er)?|hyresratt(?:er)?|bostad(?:er)?|bostader)|kallkallan|hertson|ekorr|radjur|edefors|projekt", title + " " + path, re.I):
+        if not re.search(r"nyproduktion|nybygg|bygger|(?:ny|nya)[\s-]+(?:\d+[\s-]+)?(?:lägenhet(?:er)?|lagenhet(?:er)?|hyresrätt(?:er)?|hyresratt(?:er)?|bostad(?:er)?|bostader)|kallkallan|hertson|ekorr|radjur|edefors|projekt", title + " " + path, re.I):
             return "Övrig länk – ej projektindikation"
     if "galären" in source and not re.search(r"/projekt/|/galaren-projekt/|nyproduktion|bygger|bostadsprojekt", title + " " + path, re.I):
         return "Övrig länk – ej projektindikation"
