@@ -66,6 +66,26 @@ class ClassificationTest(unittest.TestCase):
         row = {"url": "https://lulebo.se/artikel/projekt-i-vara-omraden", "title": "Projekt i våra områden", "source": "Lulebo"}
         self.assertEqual(module.candidate_class(row, set(), []), "Översiktssida – sök projektspecifika länkar")
 
+    def test_manual_review_project_category(self):
+        decision = {"project_id": "lulebo-hertson-ekorr-radjur", "status": "Granskat – befintligt projekt", "comment": "Samma projekt"}
+        self.assertEqual(module.review_category(decision), "Granskat – kopplat ProjektID")
+
+    def test_manual_review_historical_not_new(self):
+        decision = {"project_id": "", "status": "Historiskt projekt", "comment": "Äldre inflyttning"}
+        self.assertEqual(module.review_category(decision), "Granskat – historiskt projekt")
+
+    def test_manual_review_invalid_without_id(self):
+        with self.assertRaises(ValueError):
+            module.review_category({"project_id": "", "status": "Granskat – befintligt projekt"})
+
+    def test_reviewed_urls_are_normalized(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            csv_file = Path(directory) / "decisions.csv"
+            csv_file.write_text("URL,ProjektID,Granskningsstatus,Kommentar\\nhttps://www.lulebo.se/artikel/assistentvagen/, ,Historiskt projekt,Äldre\\n", encoding="utf-8")
+            decisions = module.load_link_decisions(csv_file)
+            self.assertIn("https://lulebo.se/artikel/assistentvagen", decisions)
+
     def test_normalize_query_and_www(self):
         self.assertEqual(module.normalize("https://www.lulebo.se/artikel/nybygge/?utm_source=test"), "https://lulebo.se/artikel/nybygge")
 
