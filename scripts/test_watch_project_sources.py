@@ -82,7 +82,7 @@ class ClassificationTest(unittest.TestCase):
         import tempfile
         with tempfile.TemporaryDirectory() as directory:
             csv_file = Path(directory) / "decisions.csv"
-            csv_file.write_text("URL,ProjektID,Granskningsstatus,Kommentar\\nhttps://www.lulebo.se/artikel/assistentvagen/, ,Historiskt projekt,Äldre\\n", encoding="utf-8")
+            csv_file.write_text("URL,ProjektID,Granskningsstatus,Kommentar\nhttps://www.lulebo.se/artikel/assistentvagen/, ,Historiskt projekt,Äldre\n", encoding="utf-8")
             decisions = module.load_link_decisions(csv_file)
             self.assertIn("https://lulebo.se/artikel/assistentvagen", decisions)
 
