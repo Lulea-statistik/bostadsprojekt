@@ -46,6 +46,26 @@ class ClassificationTest(unittest.TestCase):
         row = {"url": "https://lulebo.se/artikel/hyresforhandlingar", "title": "Ny hyresförhandling för 2027", "source": "Lulebo"}
         self.assertIn("Övrig länk", module.candidate_class(row, set(), []))
 
+    def test_planning_permission_not_build_project(self):
+        row = {"url": "http://lulea.se/detaljplan-fageln", "title": "Detaljplan Fågeln", "source": "Luleå kommun – mark och exploatering"}
+        self.assertEqual(module.candidate_class(row, set(), []), "Planeringsunderlag – ej verifierat byggprojekt")
+
+    def test_municipal_project_overview_as_context(self):
+        row = {"url": "https://lulea.se/samhalle--utveckling/aktuella-projekt.html", "title": "Aktuella projekt", "source": "Luleå kommun – Kronandalen"}
+        self.assertEqual(module.candidate_class(row, set(), []), "Planeringsunderlag – ej verifierat byggprojekt")
+
+    def test_bonava_category_page_not_project(self):
+        row = {"url": "https://bonava.se/bostad/lulea/lagenhet", "title": "Lägenheter", "source": "Bonava"}
+        self.assertEqual(module.candidate_class(row, set(), []), "Översiktssida – sök projektspecifika länkar")
+
+    def test_bonava_project_detail_still_candidate(self):
+        row = {"url": "https://bonava.se/bostad/lulea/kronandalen/kasan", "title": "Kåsan", "source": "Bonava"}
+        self.assertEqual(module.candidate_class(row, set(), []), "Möjligt nytt projekt – granska")
+
+    def test_lulebo_project_list_is_overview(self):
+        row = {"url": "https://lulebo.se/artikel/projekt-i-vara-omraden", "title": "Projekt i våra områden", "source": "Lulebo"}
+        self.assertEqual(module.candidate_class(row, set(), []), "Översiktssida – sök projektspecifika länkar")
+
     def test_normalize_query_and_www(self):
         self.assertEqual(module.normalize("https://www.lulebo.se/artikel/nybygge/?utm_source=test"), "https://lulebo.se/artikel/nybygge")
 
