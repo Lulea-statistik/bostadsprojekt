@@ -2,8 +2,8 @@
 
 Sammanställning av kommande, planerade, säljstartade och pågående nya bostadsprojekt i Luleå kommun.
 
-**Senaste kontroll:** 2026-10-16  
-**Källprincip:** endast privata/icke-kommunala källor. Luleå kommun och kommunala bolag används inte som verifieringskälla.
+**Senaste registerkomplettering:** 2026-11-10 (tidigare befintliga projekt: senaste källkontroll 2026-10-16).  
+**Källprincip:** privata byggherre- och fastighetsägarkällor används i första hand för projektspecifika fakta. Luleå kommuns planer, markanvisningar och aktuella projekt används nu också som **primär källa för kommunala beslut och planeringsstatus** samt för att upptäcka tidiga projekt. Kommunala uppgifter om faktiskt påbörjad byggnation kan styrka status för det särskilda projektet, men en plan eller markanvisning får aldrig räknas som säkert byggstartad bostadsvolym. Kommunala bolags egna projektuppgifter får användas som projektägarkälla med tydlig avsändare.
 
 ## Aktiva och verifierat planerade projekt
 
@@ -31,7 +31,7 @@ Sammanställning av kommande, planerade, säljstartade och pågående nya bostad
 | Centralt bostadshus vid Varvsleden / Gersen | Centrum | 24 | Troligen inaktuell | Äldre planerad byggstart 2019 | 2026-10-16 |
 | Hertsöheden – Bonava/Ekeblad | Hertsöheden | Ej fastställt per aktör | Tidigt planeringsskede | Områdesvolym kan inte tillskrivas respektive byggherre | 2026-10-16 |
 
-**Bevakningsfall: 6.**
+**Bevakningsfall i ursprunglig genomgång: 6.** Från 2026-11-10 har registret kompletterats med nya projekt från kommunala uppgifter; totalsiffran ovan avser den äldre genomgången från oktober.
 
 ## Förändringar vid senaste kontrollen
 
@@ -120,3 +120,25 @@ Följande privata aktörer bevakas särskilt eftersom de har tydlig lokal närva
 - **Rikshem** – medel prioritet; stor privat bostadsägare med egen nyproduktionsbevakning.
 
 För att undvika dubbelräkning behandlas **SBS/Studentbostäder i Norden och STUSAB** som närstående källor. Ett projekt som förekommer hos båda ska fortfarande bara få ett ProjektID och en Räknegrupp.
+
+## Komplettering 10 november 2026 – kommunala projekt och tidiga bevakningsfall
+
+Följande nya projekt-ID har lagts till i `data/project_registry.csv` och `data/history.csv`. Nya rader är en **avgränsad komplettering**, inte en ny samlad källkontroll av samtliga befintliga projekt. Det tidigare projekturvalet behåller sina faktiska kontrolltider. Inga tidigare snapshots har skrivits om.
+
+| Projekt-ID | Projekt | Status och avgränsning |
+|---|---|---|
+| `skidan` | Skidan, Kronandalen | **Aktiv/verifierad:** BD Bygg påbörjade byggnation våren 2026; 95 lägenheter enligt kommunens projektsida. Separat från Kronanvägen och Lulebos Västra entrén. |
+| `vastra-entren-lulebo` | Lulebo, Västra entrén | **Bevakning:** markanvisning och detaljplanearbete; fyra punkthus, antal bostäder inte fastställt. |
+| `bavern-1` | Bävern 1 | **Bevakning:** blandstad med bostäder som möjlig användning; ingen säker bostadsvolym. |
+| `pontonen-2` | Pontonen 2 | **Bevakning:** bostäder i blandprojekt med hotell och kontor; förberedande markarbeten är inte verifierad bostadsbyggstart. |
+| `porson-1-427` | Porsön 1:427 | **Bevakning:** planärende för studentbostäder. |
+| `orren-6` | Orren 6 | **Bevakning:** Lulebos planansökan för omvandling från kontor till bostäder. |
+| `torsken-9` | Torsken 9 | **Bevakning:** alternativ hotell eller bostäder; osäker bostadsandel. |
+
+**Inte tillagt:** Björsbyn 1:12 (Dalbo) eftersom markanvisningens ändamål som bostadsprojekt ännu inte verifierats. Registrera inte rena markanvisningsobjekt som bostadsprojekt utan belägg.
+
+### Löpande bevakning och källa
+
+Se `data/source_watchlist.csv`. Dokumentet skiljer mellan officiell projektsida, kommunens plan-/markanvisningsinformation och privat byggherres projektsidor. Vid återkommande kontroll ska varje ny informationshändelse jämföras med befintliga `ProjektID`, `Räknegrupp`, fastighetsbeteckning och byggherre. En detaljplan och en byggherres projektsida får aldrig skapa två projekt-ID för samma tillkommande bostäder.
+
+**Automatisk insamling:** källregistret är ett underlag för kommande bevakningsflöden; att en källa finns på listan betyder inte att den redan hämtas automatiskt. Källan måste kunna läsas lagenligt och tekniskt. Ingen uppskattad bostadsvolym får räknas som verifierad.
