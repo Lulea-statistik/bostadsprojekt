@@ -8,26 +8,33 @@ Bevarade kandidatlänkar i kön: 155
 
 ## Kategorier
 
-- Möjligt nytt projekt – granska: **7**
-- Möjligen redan känt projekt – verifiera: **3**
+- Möjligen redan känt projekt – verifiera: **1**
 - Känd projektkälla: **4**
 - Översiktssida – sök projektspecifika länkar: **5**
 - Planeringsunderlag – ej verifierat byggprojekt: **69**
 - Utanför Luleå / osäker geografi: **25**
 - Övrig länk – ej projektindikation: **42**
+- Granskat – kopplat ProjektID: **5**
+- Granskat – historiskt projekt: **4**
 
 ## Aktiv projektgranskning – Lulebo och Bonava
 
 Direkta nyproduktionslänkar från Lulebo och Bonava prioriteras. Planer och kommunala översikter är bakgrundsmaterial, inte prognos över byggstart.
 
-- [28 nya lägenheter i Gammelstad](https://lulebo.se/artikel/28-nya-lagenheter-i-gammelstad) – Möjligt nytt projekt – granska
-- [28 nya lägenheter på Hertsön](https://lulebo.se/artikel/28-nya-lagenheter-pa-hertson) – Möjligt nytt projekt – granska
-- [72 nya lägenheter på Porsön](https://lulebo.se/artikel/assistentvagen) – Möjligt nytt projekt – granska
-- [Hertsön, nyproduktion 28 lägenheter](https://lulebo.se/artikel/nyproduktion-av-28-lagenheter-pa-ekorr-och-radjursstigarna) – Möjligt nytt projekt – granska
-- [Örnäset, nyproduktion av källarlägenheter](https://lulebo.se/artikel/nyproduktion-av-40-50-kallarlagenheter-pa-edeforsgatan) – Möjligt nytt projekt – granska
-- [Björkskatan - tre nya lägenheter](https://lulebo.se/artikel/tre-nya-lagenheter-pa-bjorkskatan) – Möjligt nytt projekt – granska
-- [Malmudden - tre nya lägenheter](https://lulebo.se/artikel/tre-nya-lagenheter-pa-malmudden) – Möjligt nytt projekt – granska
-- [Kallkällan, nyproduktion 152 lägenheter](https://lulebo.se/artikel/vi-bygger-tva-nya-punkthus-pa-kallkallan) – Möjligen redan känt projekt – verifiera
+
+## Redan granskade källor
+
+Manuella beslut bevaras i data/source_link_decisions.csv och räknas inte som nya kandidater.
+
+- [Kallkällan 46 lägenheter i Luleå. Byggstart i mars 2025, färdigställt 2026. Luleå Genomförd](https://lindbacks.se/alla-projekt/kallkallan) – Granskat – kopplat ProjektID (kallkallan)
+- [28 nya lägenheter på Hertsön](https://lulebo.se/artikel/28-nya-lagenheter-pa-hertson) – Granskat – kopplat ProjektID (lulebo-hertson-ekorr-radjur)
+- [Hertsön, nyproduktion 28 lägenheter](https://lulebo.se/artikel/nyproduktion-av-28-lagenheter-pa-ekorr-och-radjursstigarna) – Granskat – kopplat ProjektID (lulebo-hertson-ekorr-radjur)
+- [Örnäset, nyproduktion av källarlägenheter](https://lulebo.se/artikel/nyproduktion-av-40-50-kallarlagenheter-pa-edeforsgatan) – Granskat – kopplat ProjektID (lulebo-edeforsgatan)
+- [Kallkällan, nyproduktion 152 lägenheter](https://lulebo.se/artikel/vi-bygger-tva-nya-punkthus-pa-kallkallan) – Granskat – kopplat ProjektID (lulebo-kallkallan-punkthus)
+- [28 nya lägenheter i Gammelstad](https://lulebo.se/artikel/28-nya-lagenheter-i-gammelstad) – Granskat – historiskt projekt
+- [72 nya lägenheter på Porsön](https://lulebo.se/artikel/assistentvagen) – Granskat – historiskt projekt
+- [Björkskatan - tre nya lägenheter](https://lulebo.se/artikel/tre-nya-lagenheter-pa-bjorkskatan) – Granskat – historiskt projekt
+- [Malmudden - tre nya lägenheter](https://lulebo.se/artikel/tre-nya-lagenheter-pa-malmudden) – Granskat – historiskt projekt
 
 ## Nya länkträffar
 
