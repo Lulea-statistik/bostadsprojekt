@@ -198,3 +198,18 @@ Projektuppgifter från de sju kandidatlänkarna och en Kallkällan-träff har j�
 - **Kallkällan:** Lulebos 152 lägenheter och Lindbäcks 46 lägenheter följs med skilda identiteter. De får **inte** adderas tillsammans utan att byggnads-/fastighetsmässig överlappning har uteslutits. Båda ligger därför utanför säker räkning tills kompletterande granskning genomförts.
 
 Den automatiska länkkön kan fortfarande visa redan granskade projektlänkar som kandidater; den manuella sakgranskningen finns i separat revisionsfil. Regler för projektstatus, sista fynddatum och bevarande av försvunna källor fortsätter gälla.
+
+### Beständiga länkningsbeslut för granskade källor
+
+`data/source_link_decisions.csv` är det manuella beslutsregistret, med en rad per exakt granskad URL (normaliserad från www, avslutande snedstreck och spårningsparametrar). Kolumner:
+
+- `URL`: granskad källa.
+- `ProjektID`: redan befintligt ID i `data/project_registry.csv`; obligatoriskt för **Granskat – befintligt projekt**.
+- `Granskningsstatus`: **Granskat – befintligt projekt** eller **Historiskt projekt**.
+- `Kommentar`: granskningsmotivering och eventuella begränsningar.
+
+Källbevakningen använder besluten **före** den automatiska heuristiken, validerar ProjektID mot projektregistret och visar känd projekttillhörighet i `data/source_review_queue.csv`. Redan granskade länkar finns kvar som spårbar historik, men sorteras under **Granskat – kopplat ProjektID** eller **Granskat – historiskt projekt** i stället för *Möjligt nytt projekt*. De räknas inte som nya länkträffar.
+
+**Ny URL till samma projekt:** en ny webbadress får ingen automatisk identitet enbart genom namnlikhet. Om projekt-ID inte är verifierat för den nya URL:en flaggas den fortsatt för manuell granskning. Lägg sedan till exakt den nya URL:en med det befintliga ProjektID:t i beslutsregistret, utan att skapa en ny projektpost. Att en tidigare URL saknas ändrar aldrig projektstatus eller historik.
+
+Första manuella registreringen (10 november 2026) omfattar nio länkar: två till samma Hertsön-projekt, Edeforsgatan, Lulebos punkthus på Kallkällan, Lindbäcks separata Kallkällan-fall och fyra historiska projektlänkar. Äldre daterade inflyttningsplaner har inte ensamma använts som bevis för faktisk färdigställandestatus.
