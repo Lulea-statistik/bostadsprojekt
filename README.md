@@ -158,3 +158,22 @@ Flödet läser de 10 offentliga listningssidorna i `data/source_watchlist.csv` m
 **Kvalitet och säkerhet:** flödet skriver inte i `data/history.csv`, `data/project_registry.csv` eller `snapshots/`. En länkträff räknas inte som ett bostadsprojekt, och ingen osäker bostadsvolym adderas till summeringarna. Granskare kontrollerar bostadsändamål, befintliga `ProjektID`, fastighet, projektetapper, byggstart och tidsplan innan projektpost godkänns. Länkar som granskats utan att registreras läggs i arrayen `reviewed` i `data/source_discovery_state.json`.
 
 För att automatiska commits till rapport och kö ska fungera behöver GitHub Actions ha rätt att skriva till repositoriet och eventuell branch protection tillåta den typen av uppdatering. Om det inte fungerar kan rapporten fortfarande laddas ned som workflow-artifact från körningen. Första körningen etablerar en baslinje och kan därför ge många länkträffar som inte är nya bostadsprojekt.
+
+### Beständig projektbevakning och källbortfall (november 2026)
+
+Den veckovisa källbevakningen **tar aldrig bort ett projekt för att en länk saknas**. Projektets stabila identitet är ProjektID, inte URL. Ett projekt kan förekomma på flera byggaktörers, mäklares och kommunens webbplatser. Frånvaro på en webbplats kan bero på publiceringsändring, flyttad URL, avpublicering eller tillfälligt hämtfel och betyder **inte** att byggprojektet avslutats.
+
+Upptäckta källänkar lagras beständigt i data/source_discovery_state.json med first_seen och last_seen. Om en länk inte återfinns i ett senare söktillfälle står tidigare senaste fynddatum kvar, och länken ligger kvar i granskningskön. En sådan länkträff är inte ett påstående om att den gamla sidan fortfarande är aktuell.
+
+data/source_review_queue.csv innehåller automatiskt kategorierna:
+- Möjligt nytt projekt – granska
+- Möjligen redan känt projekt – verifiera
+- Känd projektkälla
+- Utanför Luleå / osäker geografi
+- Övrig länk – ej projektindikation
+
+Kategorierna baseras på regelbaserad indikativ filtrering och **är inte automatiskt kvalitetsgodkända projekt**. Framför allt måste osäker geografi och matchning på namn kontrolleras manuellt. Lägg först efter verifiering in en ny URL som kompletterande källa till ett existerande ProjektID. Projektstatus, bostadsantal, historikrader och snapshots ändras aldrig av källbevakningen.
+
+Första körningen från 10 november 2026 gav 148 råa länkträffar. Den nya modellen behåller dessa i den beständiga länkhistoriken men delar upp dem efter relevans för att minska manuell granskning.
+
+Tester för kategorisering körs före källhämtning i GitHub Actions (scripts/test_watch_project_sources.py).
