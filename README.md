@@ -142,3 +142,19 @@ Följande nya projekt-ID har lagts till i `data/project_registry.csv` och `data/
 Se `data/source_watchlist.csv`. Dokumentet skiljer mellan officiell projektsida, kommunens plan-/markanvisningsinformation och privat byggherres projektsidor. Vid återkommande kontroll ska varje ny informationshändelse jämföras med befintliga `ProjektID`, `Räknegrupp`, fastighetsbeteckning och byggherre. En detaljplan och en byggherres projektsida får aldrig skapa två projekt-ID för samma tillkommande bostäder.
 
 **Automatisk insamling:** källregistret är ett underlag för kommande bevakningsflöden; att en källa finns på listan betyder inte att den redan hämtas automatiskt. Källan måste kunna läsas lagenligt och tekniskt. Ingen uppskattad bostadsvolym får räknas som verifierad.
+
+## Automatisk veckobevakning av nya projektkällor
+
+Arbetsflödet **Weekly housing project source watch** (`.github/workflows/watch-project-sources.yml`) körs tisdagar kl. 06.15 UTC och kan även startas manuellt med `workflow_dispatch`.
+
+Flödet läser de 10 offentliga listningssidorna i `data/source_watchlist.csv` med låg volym (en HTML-hämtning per källa). Det sammanställer länkar som kan handla om projekt och planering. Resultatet finns i:
+
+- `reports/source_watch_latest.md` – senaste källkontroll, nya länkar och hämtfel.
+- `data/source_review_queue.csv` – kandidatlänkar som måste granskas och jämföras med befintliga projekt.
+- `data/source_discovery_state.json` – tidigare upptäckta och manuellt granskade URL:er.
+
+**Källavgränsning:** det är länkar från respektive startsida/listningssida som bevakas; sidor bakom JavaScript-rendering, paginering, inloggning eller djupa undermenyer kan missas. En lyckad hämtning bevisar inte att källan är fullständigt indexerad.
+
+**Kvalitet och säkerhet:** flödet skriver inte i `data/history.csv`, `data/project_registry.csv` eller `snapshots/`. En länkträff räknas inte som ett bostadsprojekt, och ingen osäker bostadsvolym adderas till summeringarna. Granskare kontrollerar bostadsändamål, befintliga `ProjektID`, fastighet, projektetapper, byggstart och tidsplan innan projektpost godkänns. Länkar som granskats utan att registreras läggs i arrayen `reviewed` i `data/source_discovery_state.json`.
+
+För att automatiska commits till rapport och kö ska fungera behöver GitHub Actions ha rätt att skriva till repositoriet och eventuell branch protection tillåta den typen av uppdatering. Om det inte fungerar kan rapporten fortfarande laddas ned som workflow-artifact från körningen. Första körningen etablerar en baslinje och kan därför ge många länkträffar som inte är nya bostadsprojekt.
