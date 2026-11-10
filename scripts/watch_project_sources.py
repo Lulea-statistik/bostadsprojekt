@@ -35,6 +35,35 @@ def normalize(url):
     return urlunsplit((p.scheme.lower(), p.netloc.lower().removeprefix("www."), p.path.rstrip("/") or "/", "", ""))
 
 
+def load_link_decisions(path):
+    """Human-reviewed URL decisions take precedence over heuristic classifications."""
+    decisions = {}
+    if path.exists():
+        with path.open(encoding="utf-8-sig", newline="") as f:
+            for row in csv.DictReader(f):
+                url = normalize(row.get("URL", "").strip())
+                if not url.startswith(("https://", "http://")):
+                    raise ValueError("Invalid review URL: " + url)
+                if url in decisions:
+                    raise ValueError("Duplicate review URL: " + url)
+                decisions[url] = {
+                    "project_id": row.get("ProjektID", "").strip(),
+                    "status": row.get("Granskningsstatus", "").strip(),
+                    "comment": row.get("Kommentar", "").strip()
+                }
+    return decisions
+
+
+def review_category(decision):
+    if not decision:
+        return None
+    if decision["status"] == "Historiskt projekt":
+        return "Granskat – historiskt projekt"
+    if decision["status"] == "Granskat – befintligt projekt" and decision["project_id"]:
+        return "Granskat – kopplat ProjektID"
+    raise ValueError("Invalid source review decision: " + repr(decision))
+
+
 def candidate_class(item, known, names):
     """Conservative triage: never equate a link with an actual project."""
     title = item["title"].lower()
@@ -81,6 +110,13 @@ def main():
         for row in csv.DictReader(f):
             if row.get("Direkt URL", "").startswith("http"):
                 known.add(normalize(row["Direkt URL"]))
+    decisions = load_link_decisions(DATA / "source_link_decisions.csv")
+    with (DATA / "project_registry.csv").open(encoding="utf-8-sig", newline="") as f:
+        registry_ids = {r["ProjektID"] for r in csv.DictReader(f)}
+    for decision in decisions.values():
+        review_category(decision)
+        if decision["project_id"] and decision["project_id"] not in registry_ids:
+            raise ValueError("Review refers to missing ProjektID: " + decision["project_id"])
     collected = {}
     successful, failed = [], []
     for source in sources:
@@ -149,16 +185,19 @@ def main():
             "source_status": "Länk synlig vid senaste körningen"
         }
     # No deletions or completion inference, even when sources are unreachable.
-    fresh = [url for url in collected if url not in seen and url not in known and url not in reviewed]
+    fresh = [url for url in collected if url not in seen and url not in known and url not in reviewed and normalize(url) not in decisions]
     categories = {}
     rows = []
     for url, item in sorted(persistent.items()):
         if url in reviewed:
             continue
-        label = candidate_class({"url": url, "title": item["title"], "source": item["source"]}, known, names)
+        decision = decisions.get(normalize(url))
+        label = review_category(decision) if decision else candidate_class({"url": url, "title": item["title"], "source": item["source"]}, known, names)
         categories[label] = categories.get(label, 0) + 1
         rows.append((label, item, url))
     order = {
+        "Granskat – kopplat ProjektID": 7,
+        "Granskat – historiskt projekt": 8,
         "Möjligt nytt projekt – granska": 0,
         "Möjligen redan känt projekt – verifiera": 1,
         "Känd projektkälla": 2,
@@ -175,10 +214,12 @@ def main():
     )
     with (DATA / "source_review_queue.csv").open("w", encoding="utf-8", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["Källa", "Länkrubrik", "URL", "Kategori", "Först upptäckt", "Senast sedd", "Källstatus"])
+        writer.writerow(["Källa", "Länkrubrik", "URL", "Kategori", "Först upptäckt", "Senast sedd", "Källstatus", "ProjektID", "Granskningskommentar"])
         for label, item, url in rows:
             writer.writerow([item["source"], item["title"], url, label,
-                             item["first_seen"], item["last_seen"], item["source_status"]])
+                             item["first_seen"], item["last_seen"], item["source_status"],
+                             decisions.get(normalize(url), {}).get("project_id", ""),
+                             decisions.get(normalize(url), {}).get("comment", "")])
     report = ROOT / "reports/source_watch_latest.md"
     report.parent.mkdir(parents=True, exist_ok=True)
     lines = ["# Bevakning av bostadsprojekt", "", "Kontrollerad: " + today, "",
@@ -193,6 +234,12 @@ def main():
     for label, item, url in rows:
         if item["source"].lower() in ("lulebo", "bonava") and label in ("Möjligt nytt projekt – granska", "Möjligen redan känt projekt – verifiera"):
             lines.append("- [" + item["title"].replace("[", "(").replace("]", ")") + "](" + url + ") – " + label)
+    lines += ["", "## Redan granskade källor", "",
+              "Manuella beslut bevaras i data/source_link_decisions.csv och räknas inte som nya kandidater.", ""]
+    for label, item, url in rows:
+        if label.startswith("Granskat"):
+            d = decisions[normalize(url)]
+            lines.append("- [" + item["title"].replace("[", "(").replace("]", ")") + "](" + url + ") – " + label + ((" (" + d["project_id"] + ")") if d["project_id"] else ""))
     lines += ["", "## Nya länkträffar", ""]
     for url in fresh[:100]:
         item = collected[url]
