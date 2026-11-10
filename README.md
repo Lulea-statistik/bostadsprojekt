@@ -187,3 +187,14 @@ Tester för kategorisering körs före källhämtning i GitHub Actions (scripts/
 - Projektvolym, byggstart och framtida bostadstillskott räknas aldrig från enbart planeringsunderlag. Även projekt som inte längre finns på en källa kan fortsätta att följas med samma ProjektID och andra källor.
 
 Rapporten `reports/source_watch_latest.md` innehåller nu ett eget avsnitt för direkta Lulebo-/Bonava-träffar och skiljer dem från kommunala planeringsunderlag. Källan måste fortfarande granskas innan ett projekt läggs till eller ändras.
+
+### Källgranskning av Lulebos projektsidor (10 november 2026)
+
+Projektuppgifter från de sju kandidatlänkarna och en Kallkällan-träff har jämförts med projektregistret och dokumenterats i `data/lulebo_source_audit_2026-11-10.csv`. Granskningen skiljer mellan *historiska uppgifter*, *pågående nyproduktion*, *villkorade nya bostäder inom ROT* och *möjlig dubbelräkning*. Datum som redan passerat i en äldre webbsida är inte i sig bevis för faktiskt färdigställande.
+
+- **Hertsön / Ekorr- och Rådjursstigarna:** två Lulebo-länkar beskriver ett enda projekt om 28 lägenheter, med ett ProjektID och en enda räknegrupp. Lulebo anger byggstart hösten 2025 och planerad inflyttning mars 2027.
+- **Edeforsgatan:** preliminärt 40–50 nytillkommande källarlägenheter under flerårig ROT; för första etappen anges fem preliminära lägenheter. Cirka 270 befintliga ROT-bostäder får **inte** adderas som nya. RäknaIProjektTotal = Nej tills bostadstillskottet är klarlagt.
+- **Gammelstad, Assistentvägen, Björkskatan och Malmudden:** historiska projektsidor med inflyttningsuppgifter 2021–2024. De skapar inte nya kommande byggprojekt i registret. För Gäddviksvägen ersattes 24 lägenheter med 28, vilket innebär ett netto om fyra om projektet genomförts som beskrivet.
+- **Kallkällan:** Lulebos 152 lägenheter och Lindbäcks 46 lägenheter följs med skilda identiteter. De får **inte** adderas tillsammans utan att byggnads-/fastighetsmässig överlappning har uteslutits. Båda ligger därför utanför säker räkning tills kompletterande granskning genomförts.
+
+Den automatiska länkkön kan fortfarande visa redan granskade projektlänkar som kandidater; den manuella sakgranskningen finns i separat revisionsfil. Regler för projektstatus, sista fynddatum och bevarande av försvunna källor fortsätter gälla.
