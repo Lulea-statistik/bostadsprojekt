@@ -177,3 +177,13 @@ Kategorierna baseras på regelbaserad indikativ filtrering och **är inte automa
 Första körningen från 10 november 2026 gav 148 råa länkträffar. Den nya modellen behåller dessa i den beständiga länkhistoriken men delar upp dem efter relevans för att minska manuell granskning.
 
 Tester för kategorisering körs före källhämtning i GitHub Actions (scripts/test_watch_project_sources.py).
+
+### Avgränsning av aktiv bevakning från 10 november 2026
+
+- **Lulebo och Bonava:** prioriterade för projektspecifik bevakning av kommande, pågående och marknadsförda bostadsprojekt. Kontrollera om länkar gäller samma byggprojekt, etapp eller färdigställda bostäder.
+- **Kommunala detaljplaner, markanvisningar och projekt-/översiktssidor:** behandlas enbart som *planeringsunderlag*. En detaljplan möjliggör bebyggelse men innebär varken att byggstart är beslutad eller att ett bostadsprojekt genomförs.
+- **Samlings- och söksidor** hos Lulebo och Bonava ger uppslag till direktlänkar men är inte enskilda projekt.
+- Övriga privata byggherrekällor behålls i källregistret. Ingen gammal länk eller projektpost tas bort; denna prioritering påverkar enbart granskningskön.
+- Projektvolym, byggstart och framtida bostadstillskott räknas aldrig från enbart planeringsunderlag. Även projekt som inte längre finns på en källa kan fortsätta att följas med samma ProjektID och andra källor.
+
+Rapporten `reports/source_watch_latest.md` innehåller nu ett eget avsnitt för direkta Lulebo-/Bonava-träffar och skiljer dem från kommunala planeringsunderlag. Källan måste fortfarande granskas innan ett projekt läggs till eller ändras.

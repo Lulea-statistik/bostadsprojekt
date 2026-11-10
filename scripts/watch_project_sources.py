@@ -41,6 +41,13 @@ def candidate_class(item, known, names):
     url = item["url"].lower()
     source = item["source"].lower()
     path = urlsplit(url).path.lower()
+    # Planning permissions and overview pages are context, never evidence of an active build.
+    if "luleå kommun" in source:
+        return "Planeringsunderlag – ej verifierat byggprojekt"
+    if ("bonava" in source and path.rstrip("/") in ("/bostad/lulea/lagenhet", "/bostad/lulea/radhus", "/bostad/lulea/kronandalen", "/bostad/lulea")):
+        return "Översiktssida – sök projektspecifika länkar"
+    if ("lulebo" in source and ("avslutade-projekt" in path or "projekt-i-vara-omraden" in path)):
+        return "Översiktssida – sök projektspecifika länkar"
     if item["url"] in known:
         return "Känd projektkälla"
     if ("lindbäcks" in source or "lindb" in source):
@@ -155,8 +162,10 @@ def main():
         "Möjligt nytt projekt – granska": 0,
         "Möjligen redan känt projekt – verifiera": 1,
         "Känd projektkälla": 2,
-        "Utanför Luleå / osäker geografi": 3,
-        "Övrig länk – ej projektindikation": 4
+        "Översiktssida – sök projektspecifika länkar": 3,
+        "Planeringsunderlag – ej verifierat byggprojekt": 4,
+        "Utanför Luleå / osäker geografi": 5,
+        "Övrig länk – ej projektindikation": 6
     }
     rows.sort(key=lambda x: (order.get(x[0], 5), x[1]["source"], x[2]))
     previous_file.write_text(
@@ -179,6 +188,11 @@ def main():
              "## Kategorier", ""]
     for name, count in sorted(categories.items(), key=lambda pair: order.get(pair[0], 5)):
         lines.append("- " + name + ": **" + str(count) + "**")
+    lines += ["", "## Aktiv projektgranskning – Lulebo och Bonava", "",
+              "Direkta nyproduktionslänkar från Lulebo och Bonava prioriteras. Planer och kommunala översikter är bakgrundsmaterial, inte prognos över byggstart.", ""]
+    for label, item, url in rows:
+        if item["source"].lower() in ("lulebo", "bonava") and label in ("Möjligt nytt projekt – granska", "Möjligen redan känt projekt – verifiera"):
+            lines.append("- [" + item["title"].replace("[", "(").replace("]", ")") + "](" + url + ") – " + label)
     lines += ["", "## Nya länkträffar", ""]
     for url in fresh[:100]:
         item = collected[url]
