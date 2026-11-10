@@ -8,13 +8,12 @@ Bevarade kandidatlänkar i kön: 155
 
 ## Kategorier
 
-- Möjligen redan känt projekt – verifiera: **1**
 - Känd projektkälla: **4**
 - Översiktssida – sök projektspecifika länkar: **5**
 - Planeringsunderlag – ej verifierat byggprojekt: **69**
 - Utanför Luleå / osäker geografi: **25**
 - Övrig länk – ej projektindikation: **42**
-- Granskat – kopplat ProjektID: **5**
+- Granskat – kopplat ProjektID: **6**
 - Granskat – historiskt projekt: **4**
 
 ## Aktiv projektgranskning – Lulebo och Bonava
@@ -27,6 +26,7 @@ Direkta nyproduktionslänkar från Lulebo och Bonava prioriteras. Planer och kom
 Manuella beslut bevaras i data/source_link_decisions.csv och räknas inte som nya kandidater.
 
 - [Kallkällan 46 lägenheter i Luleå. Byggstart i mars 2025, färdigställt 2026. Luleå Genomförd](https://lindbacks.se/alla-projekt/kallkallan) – Granskat – kopplat ProjektID (kallkallan)
+- [Kvarteret Skogsgläntan 20 radhus och 32 lägenheter. Planerad säljstart första kvartalet 2026. Luleå Bygglov](https://lindbacks.se/alla-projekt/kvarteret-skogsglantan) – Granskat – kopplat ProjektID (skogsglantan)
 - [28 nya lägenheter på Hertsön](https://lulebo.se/artikel/28-nya-lagenheter-pa-hertson) – Granskat – kopplat ProjektID (lulebo-hertson-ekorr-radjur)
 - [Hertsön, nyproduktion 28 lägenheter](https://lulebo.se/artikel/nyproduktion-av-28-lagenheter-pa-ekorr-och-radjursstigarna) – Granskat – kopplat ProjektID (lulebo-hertson-ekorr-radjur)
 - [Örnäset, nyproduktion av källarlägenheter](https://lulebo.se/artikel/nyproduktion-av-40-50-kallarlagenheter-pa-edeforsgatan) – Granskat – kopplat ProjektID (lulebo-edeforsgatan)
