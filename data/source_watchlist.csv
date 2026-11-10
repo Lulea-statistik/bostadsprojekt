@@ -1,6 +1,6 @@
 Källa,Källtyp,Bevakningssignal,Prioritet,URL,Avgränsning
-Luleå kommun – pågående detaljplaner,Kommunal planmyndighet,"Tidiga planbesked, samråd, granskning, antagande",Hög,https://www.lulea.se/samhalle--utveckling/detaljplaner.html,Ledtråd/planeringsstatus; matcha fastighetsbeteckning mot befintligt ProjektID
-Luleå kommun – mark och exploatering,Kommunal exploatering,"Markanvisning, byggherre, upplåtelse, etapp",Hög,https://www.lulea.se/samhalle--utveckling/mark-och-exploatering.html,Markanvisning ≠ byggstart; endast bostadsändamål registreras som projekt
+Luleå kommun – pågående detaljplaner,Kommunal planmyndighet,"Tidiga planbesked, samråd, granskning, antagande",Hög,https://www.lulea.se/planer,Ledtråd/planeringsstatus; matcha fastighetsbeteckning mot befintligt ProjektID
+Luleå kommun – mark och exploatering,Kommunal exploatering,"Markanvisning, byggherre, upplåtelse, etapp",Hög,https://www.lulea.se/samhalle--utveckling/mark-och-exploatering/mark-for-bostadsbyggande.html,Markanvisning ≠ byggstart; endast bostadsändamål registreras som projekt
 Luleå kommun – aktuella projekt,Kommunal projektsida,"Byggstatus, byggstart, tidplan och område",Hög,https://www.lulea.se/samhalle--utveckling/aktuella-projekt.html,Identifiera självständiga kvarter/etapper för att undvika dubbelräkning
 Luleå kommun – Kronandalen,Kommunal projektsida,"Skidan, Västra entrén, etapper och förändrad tidplan",Hög,https://www.lulea.se/samhalle--utveckling/aktuella-projekt/kronan---kronandalen.html,"Håll Skidan, Kronanvägen och Lulebos Västra entrén åtskilda"
 Luleå kommun – beslut och pressrum,Kommunala ärenden,Planuppdrag och nya exploateringsförslag,Hög,https://www.lulea.se/kommun--politik/pressrum.html,"Ny planprocess är bevakning, inte verifierad bostadsvolym"
