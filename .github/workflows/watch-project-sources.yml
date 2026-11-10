@@ -1,0 +1,42 @@
+name: Weekly housing project source watch
+on:
+  schedule:
+    - cron: "15 6 * * 2"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: housing-project-source-watch
+  cancel-in-progress: false
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Find possible new housing project links
+        run: python scripts/watch_project_sources.py
+      - name: Validate project registry
+        run: python scripts/validate_data.py
+      - name: Save review queue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/source_discovery_state.json data/source_review_queue.csv reports/source_watch_latest.md
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update source review queue"
+            git push
+          fi
+      - name: Upload discovery report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: housing-project-source-watch
+          path: |
+            data/source_discovery_state.json
+            data/source_review_queue.csv
+            reports/source_watch_latest.md
+          if-no-files-found: warn
