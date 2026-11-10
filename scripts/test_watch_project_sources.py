@@ -30,6 +30,14 @@ class ClassificationTest(unittest.TestCase):
         row = {"url": "https://lulebo.se/artikel/ny-lagenhetshyra", "title": "Ny lägenhetshyra", "source": "Lulebo"}
         self.assertIn("Övrig länk", module.candidate_class(row, set(), []))
 
+    def test_rent_increase_not_project(self):
+        row = {"url": "https://lulebo.se/artikel/ny-lagenhetshyra-fran-1-juli-2027", "title": "Ny lägenhetshyra från 1 juli", "source": "Lulebo"}
+        self.assertIn("Övrig länk", module.candidate_class(row, set(), []))
+
+    def test_new_housing_project_still_candidate(self):
+        row = {"url": "https://lulebo.se/artikel/28-nya-lagenheter-i-gammelstad", "title": "28 nya hyresrätter i Gammelstad", "source": "Lulebo"}
+        self.assertEqual(module.candidate_class(row, set(), []), "Möjligt nytt projekt – granska")
+
     def test_normalize_query_and_www(self):
         self.assertEqual(module.normalize("https://www.lulebo.se/artikel/nybygge/?utm_source=test"), "https://lulebo.se/artikel/nybygge")
 

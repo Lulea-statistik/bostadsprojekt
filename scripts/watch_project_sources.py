@@ -48,6 +48,8 @@ def candidate_class(item, known, names):
             return "Utanför Luleå / osäker geografi"
     if "bonava" in source and "/lulea/" not in path:
         return "Utanför Luleå / osäker geografi"
+    if "lulebo" in source and re.search(r"hyra|hyresförhand|hyreshöj|hyresgäst|hyresavi|hyresnivå|lägenhetsbyte|bostadskö", title + " " + path, re.I):
+        return "Övrig länk – ej projektindikation"
     if "lulebo" in source:
         if not re.search(r"nyproduktion|nya.lägenhet|ny.lägenhet|bygger|nybygg|kallkallan|hertson|ekorr|radjur|edefors|projekt", title + " " + path, re.I):
             return "Övrig länk – ej projektindikation"
