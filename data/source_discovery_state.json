@@ -156,5 +156,1092 @@
     "https://lulebo.se/ledigt/studentlagenhet",
     "https://lulebo.se/omrade/porson"
   ],
-  "reviewed": []
+  "reviewed": [],
+  "candidates": {
+    "http://lulea.se/detaljplan-Gammelstad26-6": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Gammelstad, Gammelstaden 26:6",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-bavern": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Centrala Luleå, Kvarteret Bävern",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-fageln": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "(",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-fjarilen3": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Varvet, Fjärilen 3",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-gultzauudden": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Gültzauudden, Innerstaden 2:1",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-hajen7": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Centrala Luleå, Hajen 7",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-hertsoheden1": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Hertsön, Hertsöheden del 1",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-katten6": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Centrala Luleå, Katten 6",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-kikarenbarmesen": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Kronan, Kikaren, Bärmesen",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-kyrkbyn": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Kyrkbyn, Gammelstaden 6:166",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-lillvikholmen": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Måttsund 22:1, Lillvikholmen",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-logementet": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Kronan, Logementet 1, Skidan 1",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-mjolkudden3-13": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Mjölkudden 3:13",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-notviken4-40": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Notviken, Cylindern och Vagnen",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-riga": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Dalbo, Riga 1:16",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-rutvikostra": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Rutvik 3:16, 11:2, 13:30",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-storen": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Centrala Luleå, Stören, Innerstaden",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-sunderbyn1-19": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Sunderbyn 1:19",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-sundsgarden4": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Östermalm, Sundsgården 4",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-svalan9": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Centrala Luleå, Svalan 9",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-terrangloparen": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Kronan, Terränglöparen, Cyklisten, Klättraren",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-tomterkallax": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Kallax 17:1",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "http://lulea.se/detaljplan-vaxthuset": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Örnäset, Växthuset 6 och 7, Bredviken 11:107",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/bostad": {
+      "source": "Bonava",
+      "title": "Hitta bostad",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/bostad/goteborg": {
+      "source": "Bonava",
+      "title": "Nyproduktion Göteborg",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/bostad/linkoping": {
+      "source": "Bonava",
+      "title": "Nyproduktion Linköping",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/bostad/lulea/kronandalen": {
+      "source": "Bonava",
+      "title": "Kronandalen",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/bostad/lulea/lagenhet": {
+      "source": "Bonava",
+      "title": "Lägenheter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/bostad/lulea/radhus": {
+      "source": "Bonava",
+      "title": "Radhus",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/bostad/stockholm": {
+      "source": "Bonava",
+      "title": "Nyproduktion Stockholm",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/bostad/umea": {
+      "source": "Bonava",
+      "title": "Nyproduktion Umeå",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/bostad/uppsala": {
+      "source": "Bonava",
+      "title": "Nyproduktion Uppsala",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/nyproduktion": {
+      "source": "Bonava",
+      "title": "Att köpa nyproduktion",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/nyproduktion/bolan": {
+      "source": "Bonava",
+      "title": "Här har vi samlat allt du behöver veta om bolån.",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/nyproduktion/ett-tryggt-kop": {
+      "source": "Bonava",
+      "title": "Ett tryggt köp",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/nyproduktion/nojda-kunder": {
+      "source": "Bonava",
+      "title": "Läs mer om nöjd kund",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/nyproduktion/stilval": {
+      "source": "Bonava",
+      "title": "Läs mer om våra inredningsval och stilkoncept.",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/nyproduktion/svanenmarkt": {
+      "source": "Bonava",
+      "title": "Läs mer om vad Svanenmärkning innebär.",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://galaren.se/foretagsbostader": {
+      "source": "Galären",
+      "title": "Företagsbostäder",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://galaren.se/min-bostad": {
+      "source": "Galären",
+      "title": "Bostad",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://galaren.se/nyheter/nu-startar-forhandlingen-om-bostadshyran-2027": {
+      "source": "Galären",
+      "title": "På galärenNu startar förhandlingen om bostadshyran för 2027Vi på Galären är medlem i Fastighetsägarna som årligen förhandlar bostadshyran me",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://galaren.se/nyheter/tove-vill-gora-skillnad-i-varje-projekt": {
+      "source": "Galären",
+      "title": "2026-10-13På galärenTove vill göra skillnad i varje projektEnergi, hållbarhet och tekniska lösningar har länge varit en del av Tove Fagerval",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://galaren.se/projekt": {
+      "source": "Galären",
+      "title": "Projekt",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/alla-projekt/albytappan": {
+      "source": "Lindbäcks",
+      "title": "Albytäppan Ca 120 bostäder, planerad byggstart 2026. Botkyrka Projektutveckling",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/alla-projekt/arstafaltet": {
+      "source": "Lindbäcks",
+      "title": "Årstafältet Ca 160 bostäder, planerad byggstart 2031. Stockholm Projektutveckling",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/alla-projekt/bark": {
+      "source": "Lindbäcks",
+      "title": "Bark 188 lägenheter i Olofsdal, Umeå, planerad byggstart 2027. Projektutveckling",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/alla-projekt/kallkallan": {
+      "source": "Lindbäcks",
+      "title": "Kallkällan 46 lägenheter i Luleå. Byggstart i mars 2025, färdigställt 2026. Luleå Genomförd",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/alla-projekt/krongatan": {
+      "source": "Lindbäcks",
+      "title": "Krongatan Skellefteå Genomförd",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/alla-projekt/kv-nacken": {
+      "source": "Lindbäcks",
+      "title": "Kv Näcken Ca 90 bostäder, planerad byggstart 2027. Piteå Projektutveckling",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/alla-projekt/kvarteret-skogsglantan": {
+      "source": "Lindbäcks",
+      "title": "Kvarteret Skogsgläntan 20 radhus och 32 lägenheter. Planerad säljstart första kvartalet 2026. Luleå Bygglov",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/alla-projekt/tjarnbacken": {
+      "source": "Lindbäcks",
+      "title": "Tjärnbacken Ca 200 bostäder, planerad byggstart 2026. Planerad säljstart 2026. Boden Projektutveckling",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/bygga/hyres-och-bostadsratter": {
+      "source": "Lindbäcks",
+      "title": "Hyres- och bostadsrätter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/bygga/studentboenden": {
+      "source": "Lindbäcks",
+      "title": "Studentboenden",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/projektutveckling": {
+      "source": "Lindbäcks",
+      "title": "Projektutveckling",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/projektutveckling/fastighetsutvecklare": {
+      "source": "Lindbäcks",
+      "title": "Fastighetsutvecklare",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/projektutveckling/investerare": {
+      "source": "Lindbäcks",
+      "title": "Investerare",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/projektutveckling/markagare": {
+      "source": "Lindbäcks",
+      "title": "Markägare",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/referenser": {
+      "source": "Lindbäcks",
+      "title": "Våra projekt",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt.html": {
+      "source": "Luleå kommun – Kronandalen",
+      "title": "Aktuella projekt",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/antnas-verksamhetsomrade.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Antnäs verksamhetsområde",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/bensbyn-vattennivajustering-med-fisktrappa-.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Bensbyn Vattennivåjustering med fisktrappa",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/bjorkskataleden-avstangd-vid-scania.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Björkskataleden avstängd vid Scania",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/bjorkskatan-renovering-aktivitetsyta-vid-stormvagen.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Björkskatan renovering aktivitetsyta vid Stormvägen",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/bodenvagen-renovering-viadukter.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Bodenvägen renovering viadukter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/centrum---ny-belysning.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Centrum - ny belysning",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/entreprenorsbostader.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Entreprenörsbostäder",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/ersnas-lekplats.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Ersnäs lekplats",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/furuparksskolan.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Furuparksskolan",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/gamla-deponin-vid-lokmannavagen.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Gamla deponin vid Lokmannavägen",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/gammelstad-sporthall.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Gammelstad sporthall",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/hagnan-restaurering-och-byggnationer.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Hägnan, restaurering och byggnationer",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/hantverksvagen-gammelstad.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Hantverksvägen, Gammelstad",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/hertsoheden.html": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Hertsöheden Luleås nästa stora bostadsområde planeras",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/hertson-gang--och-cykelvag-svedjevagen.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Hertsön gång- och cykelväg Svedjevägen",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/hertsovagen-renovering-viadukter.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Hertsövägen renovering viadukter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/karlshall-miljoprojekt.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Karlshäll-Miljöprojekt",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/kopmantorget--renovering-gangstrak.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Köpmantorget- renovering gångstråk",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/kronan---kronandalen/kvalitets-och-gestaltningsprogram.html": {
+      "source": "Luleå kommun – Kronandalen",
+      "title": "Gå till kvalitets- och gestaltningsprogrammet för Kronandalen",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/kronanvagen---bostader.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Kronanvägen - bostäder",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/lararegatans-gruppbostad.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Läraregatans gruppbostad",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/lulea-hamn.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Luleå Hamn",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/lulea-industripark.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Luleå Industripark",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/luleas-nya-centralstation.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Luleås nya centralstation",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/malmudden-ny-lekplats.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Malmudden, ny lekplats",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/midskogsskolans-innermiljo.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Midskogsskolans innermiljö",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/mjolkuddsberget---upprustning-elljusspar.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Mjölkuddsberget - upprustning elljusspår",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/norrbotniabanan.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Norrbotniabanan",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/norrleden.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Norrleden",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/ostra-lanken-i-mal.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Östra länken i mål",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/porson---renovering-gang-och-cykelvagar.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Porsön - renovering gång och cykelvägar",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/rutviks-sodra-arbetsplatsomrade.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Rutviks södra arbetsplatsområde",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/stadsoskolan-gammelstad.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Stadsöskolan Gammelstad",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/sunderby-verksamhetsomrade.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Sunderby verksamhetsområde",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/trekanten---parkeringsplats-i-centrum.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Trekanten - parkeringsplats i centrum",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/tunaskolan-om--och-tillbyggnad.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Tunaskolan: om- och tillbyggnad",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/mark-och-exploatering.html": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Mark och exploatering",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/mark-och-exploatering/markanvisningar.html": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Mark- anvisningar Vilka markanvisningar är aktuella just nu?",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/mark-och-exploatering/tomter-for-fritidshus.html": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Läs mer om tomter för fritidshus",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/mark-och-exploatering/tomtko-for-smahus.html": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Läs mer på sidan Tomtkö för småhus",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/samhallsplanering/detaljplaner.html": {
+      "source": "Luleå kommun – pågående detaljplaner",
+      "title": "Detaljplaner",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/samhallsplanering/detaljplaner/pagaende-detaljplaner.html": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Detaljplaner Vilka detaljplaner arbetas det med just nu?",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/28-nya-lagenheter-i-gammelstad": {
+      "source": "Lulebo",
+      "title": "28 nya lägenheter i Gammelstad",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/28-nya-lagenheter-pa-hertson": {
+      "source": "Lulebo",
+      "title": "28 nya lägenheter på Hertsön",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/affarslokaler-porson": {
+      "source": "Lulebo",
+      "title": "Affärslokaler Porsön",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/allmanna-bestammelser-for-lagenheter": {
+      "source": "Lulebo",
+      "title": "...för lägenheter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/ansok-om-bostadsanpassningsbidrag-hos-lulea-kommun": {
+      "source": "Lulebo",
+      "title": "Bostadsanpassning",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/assistentvagen": {
+      "source": "Lulebo",
+      "title": "72 nya lägenheter på Porsön",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/avslutade-projekt": {
+      "source": "Lulebo",
+      "title": "Avslutade projekt",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/bostadsomraden-a-o": {
+      "source": "Lulebo",
+      "title": "Bostadsområden A-Ö",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/din-lagenhet-och-gard": {
+      "source": "Lulebo",
+      "title": "Din lägenhet och gård",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/en-hyresgastlokal-pa-porson": {
+      "source": "Lulebo",
+      "title": "Porsön - en lokal",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/fasadrenovering-samt-oversyn-av-balkonger-pa-professorsvagen-35-167": {
+      "source": "Lulebo",
+      "title": "Porsön, Professorsvägen 35-167",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/forbattrad-inomhus-och-utomhusmiljo-pa-forskarvagen-2-218": {
+      "source": "Lulebo",
+      "title": "Porsön, Forskarvägen 2-218",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/garagerenoveringar-pa-forskarvagen": {
+      "source": "Lulebo",
+      "title": "Porsön, Forskarvägen, garage",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/garagerenoveringar-pa-professorsvagen-35-167-och-240-316": {
+      "source": "Lulebo",
+      "title": "Porsön, renovering garage",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/gastlagenheter-en-praktisk-forman-for-hyresgaster-i-trygghetsboenden": {
+      "source": "Lulebo",
+      "title": "Gästlägenheter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/hlu-hyresgaststyrt-lagenhetsunderhall": {
+      "source": "Lulebo",
+      "title": "Lägenhetsunderhåll (HLU)",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/hyra-overnattningslagenhet-som-ett-komplement-till-permanent-bostad": {
+      "source": "Lulebo",
+      "title": "Övernattningslägenheter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/lagenhetsbyte": {
+      "source": "Lulebo",
+      "title": "Lägenhetsbyte",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/med-aterbruk-ar-mycket-vunnet": {
+      "source": "Lulebo",
+      "title": "Studentlägenhet med secondhand-inredning",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/ny-lagenhetshyra-fran-1-juli-2021": {
+      "source": "Lulebo",
+      "title": "Ny lägenhetshyra från 1 juli 2021",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/ny-lagenhetshyra-fran-1-juli-2022": {
+      "source": "Lulebo",
+      "title": "Ny lägenhetshyra från 1 juli 2022",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/ny-lagenhetshyra-fran-1-juli-2023": {
+      "source": "Lulebo",
+      "title": "Ny lägenhetshyra från 1 juli 2023",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/ny-lagenhetshyra-fran-1-juli-2024": {
+      "source": "Lulebo",
+      "title": "Ny lägenhetshyra från 1 juli 2024",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/ny-lagenhetshyra-fran-1-juli-2025": {
+      "source": "Lulebo",
+      "title": "Ny lägenhetshyra från 1 juli 2025",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/ny-lagenhetshyra-fran-1-juli-2027": {
+      "source": "Lulebo",
+      "title": "Ny lägenhetshyra från 1 juli 2026",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/nyproduktion-av-28-lagenheter-pa-ekorr-och-radjursstigarna": {
+      "source": "Lulebo",
+      "title": "Hertsön, nyproduktion 28 lägenheter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/nyproduktion-av-40-50-kallarlagenheter-pa-edeforsgatan": {
+      "source": "Lulebo",
+      "title": "Örnäset, nyproduktion av källarlägenheter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/parkeringsplatser-i-lulebos-bostadsomraden": {
+      "source": "Lulebo",
+      "title": "Parkering",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/professorsvagen-pa-porson-vi-forbattrar-inomhusmiljon-och-utomhusmiljon": {
+      "source": "Lulebo",
+      "title": "Porsön, Professorsvägen",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/projekt-i-vara-omraden": {
+      "source": "Lulebo",
+      "title": "Projekt i våra områden",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/renovering-av-lagenheter-pa-klapphallstigen-i-ranea": {
+      "source": "Lulebo",
+      "title": "Råneå, Klapphällstigen 10-160, lägenheter och markarbeten",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/snorojning-i-lulebos-bostadsomraden": {
+      "source": "Lulebo",
+      "title": "Snöröjning",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/studentbostader": {
+      "source": "Lulebo",
+      "title": "Studentbostäder",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/tidsbegransade-hyresavtal-en-snabb-losning-for-en-tillfallig-bostad": {
+      "source": "Lulebo",
+      "title": "Tidsbegränsade hyresavtal",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/tre-nya-lagenheter-pa-bjorkskatan": {
+      "source": "Lulebo",
+      "title": "Björkskatan - tre nya lägenheter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/tre-nya-lagenheter-pa-malmudden": {
+      "source": "Lulebo",
+      "title": "Malmudden - tre nya lägenheter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/trygga-trivsamma-kvarter": {
+      "source": "Lulebo",
+      "title": "Trygga, trivsamma kvarter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/trygghetsboenden": {
+      "source": "Lulebo",
+      "title": "Trygghetsboenden - vanliga lägenheter för aktiva och självständiga personer som fyllt 65 år Ett trygghetsboende är inget vård- eller service",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/tv-utbud": {
+      "source": "Lulebo",
+      "title": "Tv-utbud i Lulebos lägenheter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/under-2023-2024-utfors-balkongrenovering-pa-professorsvagen-11-15-17-21": {
+      "source": "Lulebo",
+      "title": "Porsön, Professorsvägen 11-15, 17-21",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/utlaningsvillkor-for-gastlagenheter-i-trygghetsboenden": {
+      "source": "Lulebo",
+      "title": "Utlåningsvillkor, gästlägenheter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/vara-bostader": {
+      "source": "Lulebo",
+      "title": "Våra bostäder",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/varme-i-bostaden": {
+      "source": "Lulebo",
+      "title": "Inomhustemperatur i bostaden",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/artikel/vi-bygger-tva-nya-punkthus-pa-kallkallan": {
+      "source": "Lulebo",
+      "title": "Kallkällan, nyproduktion 152 lägenheter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/ledigt/lagenhet": {
+      "source": "Lulebo",
+      "title": "Lediga lägenheter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/ledigt/studentlagenhet": {
+      "source": "Lulebo",
+      "title": "Lediga studentlägenheter",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulebo.se/omrade/porson": {
+      "source": "Lulebo",
+      "title": "Porsön",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/kronan---kronandalen.html": {
+      "source": "Luleå kommun – mark och exploatering",
+      "title": "Kronan Ny naturnära stadsdel växer fram på Kronan",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/mjolkuddsrondellen---hotell-kontor-och-bostader.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Mjölkuddsrondellen - hotell, kontor och bostäder",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lulea.se/samhalle--utveckling/aktuella-projekt/omvandling-kvarteret-bavern.html": {
+      "source": "Luleå kommun – aktuella projekt",
+      "title": "Omvandling Kvarteret Bävern",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://lindbacks.se/alla-projekt/kronanvagen": {
+      "source": "Lindbäcks",
+      "title": "Kronanvägen Ca 140 bostäder, planerad byggstart 2026. Luleå Bygglov",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/bostad/lulea/kronandalen/kasan": {
+      "source": "Bonava",
+      "title": "Kåsan",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/bostad/lulea/kronandalen/ryggsacken": {
+      "source": "Bonava",
+      "title": "Ryggsäcken",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    },
+    "https://bonava.se/bostad/lulea/kronandalen/termosen": {
+      "source": "Bonava",
+      "title": "Termosen",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "source_status": "Länk synlig vid senaste körningen"
+    }
+  }
 }
