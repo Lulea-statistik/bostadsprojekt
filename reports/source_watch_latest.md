@@ -1,6 +1,6 @@
 # Bevakning av bostadsprojekt
 
-Kontrollerad: 2026-11-10
+Kontrollerad: 2026-11-11
 
 Källor som kunde läsas: 10/10
 Nya länkar sedan föregående kontroll: 0
