@@ -1,16 +1,16 @@
 # Bevakning av bostadsprojekt
 
-Kontrollerad: 2026-11-17
+Kontrollerad: 2026-11-24
 
 Källor som kunde läsas: 10/10
 Nya länkar sedan föregående kontroll: 1
-Bevarade kandidatlänkar i kön: 156
+Bevarade kandidatlänkar i kön: 157
 
 ## Kategorier
 
 - Känd projektkälla: **4**
 - Översiktssida – sök projektspecifika länkar: **5**
-- Planeringsunderlag – ej verifierat byggprojekt: **70**
+- Planeringsunderlag – ej verifierat byggprojekt: **71**
 - Utanför Luleå / osäker geografi: **25**
 - Övrig länk – ej projektindikation: **42**
 - Granskat – kopplat ProjektID: **6**
@@ -38,7 +38,7 @@ Manuella beslut bevaras i data/source_link_decisions.csv och räknas inte som ny
 
 ## Nya länkträffar
 
-- Luleå kommun – aktuella projekt: [Notviken - nya bostäder](https://lulea.se/samhalle--utveckling/aktuella-projekt/notviken---nya-bostader.html)
+- Luleå kommun – beslut och pressrum: [Kvarteret Kungsfågeln i Luleå Gymnasieskola stängs efter brand](https://lulea.se/kommun--politik/pressrum/pressrum/2026-11-18-kvarteret-kungsfageln-i-lulea-gymnasieskola-stangs-efter-brand.html)
 
 ## Källstatus
 
@@ -46,7 +46,7 @@ Manuella beslut bevaras i data/source_link_decisions.csv och räknas inte som ny
 - OK: Luleå kommun – mark och exploatering (30 matchande länkar)
 - OK: Luleå kommun – aktuella projekt (34 matchande länkar)
 - OK: Luleå kommun – Kronandalen (4 matchande länkar)
-- OK: Luleå kommun – beslut och pressrum (0 matchande länkar)
+- OK: Luleå kommun – beslut och pressrum (1 matchande länkar)
 - OK: Lulebo (47 matchande länkar)
 - OK: BD Bygg (0 matchande länkar)
 - OK: Lindbäcks (16 matchande länkar)
